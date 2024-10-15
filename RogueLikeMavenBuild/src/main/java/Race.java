@@ -1,3 +1,5 @@
+package RogueLikeMavenBuild.src.main.java;
+
 public abstract class Race {
     private final double healthModifier;
     private final double strengthModifier;
