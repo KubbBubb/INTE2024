@@ -1,31 +1,23 @@
 public abstract class Race {
-    private final String name;
-    private final int healthModifier;
-    private final int strengthModifier;
-    private final int speedModifier;
+    private final double healthModifier;
+    private final double strengthModifier;
+    private final double speedModifier;
 
-    //
-
-    public Race(String name, int healthModifier, int strengthModifier, int speedModifier) {
-        this.name = name;
+    public Race(double healthModifier, double strengthModifier, double speedModifier) {
         this.healthModifier = healthModifier;
         this.strengthModifier = strengthModifier;
         this.speedModifier = speedModifier;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getHealth() {
+    public double getHealth() {
         return healthModifier;
     }
 
-    public int getStrength() {
+    public double getStrength() {
         return strengthModifier;
     }
 
-    public int getSpeed() {
+    public double getSpeed() {
         return speedModifier;
     }
 }
@@ -37,6 +29,5 @@ Human
 Elf
 Giant
 Dwarf
-Gnome
 
 */
