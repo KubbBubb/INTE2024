@@ -1,3 +1,5 @@
+package RogueLikeMavenBuild.src.main.java;
+
 public class Terrain {
     private String name;
     private int cost;
