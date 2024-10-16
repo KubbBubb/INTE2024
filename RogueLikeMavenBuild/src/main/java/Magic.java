@@ -15,7 +15,6 @@ public abstract class Magic {
         this.effect = effect;
         this.cost =  cost;
 
-
     }
 
     public int getEffect() {

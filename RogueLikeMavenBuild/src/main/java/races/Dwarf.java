@@ -9,4 +9,5 @@ public class Dwarf extends Race {
     public void mine() {
         System.out.println("Tick!");
     }
+
 }
