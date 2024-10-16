@@ -1,3 +1,5 @@
+package RogueLikeMavenBuild.src.main.java;
+
 public abstract class Profession {
 }
 

@@ -1,3 +1,5 @@
+package RogueLikeMavenBuild.src.main.java;
+
 public class Player {
     private String name;
     private int level;

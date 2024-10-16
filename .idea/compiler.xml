@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="RogueLikeMavenBuild" />
+        <module name="INTE2024" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="src" target="23" />
+      <module name="INTE2024" target="18" />
     </bytecodeTargetLevel>
   </component>
 </project>
