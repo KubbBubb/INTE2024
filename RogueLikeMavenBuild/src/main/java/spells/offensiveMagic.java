@@ -14,7 +14,7 @@ public class offensiveMagic extends Magic {
         return multiplier;
     }
 
-    //test
+    //testar
 
 
 }
