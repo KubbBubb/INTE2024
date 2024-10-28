@@ -1,6 +1,7 @@
 package RogueLikeMavenBuild.src.test.java;
 
 import RogueLikeMavenBuild.src.main.java.Player;
+import RogueLikeMavenBuild.src.main.java.races.Dwarf;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,12 +11,13 @@ public class PlayerClassTest {
 
     @BeforeEach
     public void setUp() {
-        player = new Player("TestPlayer");
+        var dwarf = new Dwarf();
+        player = new Player("TestPlayer", dwarf);
     }
 
     @Test
     public void testInitialExperience() {
-        assertEquals(0, player.getExperience(), “Base experience should be 0");
+        assertEquals(0, player.getExperience(), "Base experience should be 0");
     }
 
     @Test
@@ -52,5 +54,14 @@ public class PlayerClassTest {
     @Test
     public void testInitialLevel() {
         assertEquals(1, player.getLevel(), "Initial level should be 1");
+    }
+
+    @Test
+    public void testMaxLevel() {
+
+
+        // Försöker ge experience som tar spelaren över max level 10
+        player.addExperience(1000);
+        assertEquals(10, player.getLevel(), "Player level should not exceed max level of 10");
     }
 }
