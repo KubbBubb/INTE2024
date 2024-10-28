@@ -2,25 +2,37 @@ package RogueLikeMavenBuild.src.main.java;
 
 public abstract class Race {
     private final double healthModifier;
-    private final double strengthModifier;
+    private final double staminaModifier;
     private final double speedModifier;
+    private final double strengthModifier;
+    private final double magicModifier;
 
-    public Race(double healthModifier, double strengthModifier, double speedModifier) {
+    public Race(double healthModifier, double staminaModifier, double speedModifier, double strengthModifier, double magicModifier) {
         this.healthModifier = healthModifier;
-        this.strengthModifier = strengthModifier;
+        this.staminaModifier = staminaModifier;
         this.speedModifier = speedModifier;
+        this.strengthModifier = strengthModifier;
+        this.magicModifier = magicModifier;
     }
 
     public double getHealth() {
         return healthModifier;
     }
 
-    public double getStrength() {
-        return strengthModifier;
+    public double getStamina() {
+        return staminaModifier;
     }
 
     public double getSpeed() {
         return speedModifier;
+    }
+
+    public double getStrength() {
+        return strengthModifier;
+    }
+
+    public double getMagicModifier() {
+        return magicModifier;
     }
 }
 
@@ -29,7 +41,8 @@ Race examples:
 
 Human
 Elf
-Giant
 Dwarf
+Giant
+Angel
 
 */
