@@ -1,6 +1,6 @@
 
 package RogueLikeMavenBuild.src.main.java;
-
+//test
 public class Player extends Entity {
     private int experience;
     private static final int EXPERIENCE_MAX = 100;
