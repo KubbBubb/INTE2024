@@ -8,19 +8,19 @@ public class EntityTest {
 
     @Test
     public void testEntityHasName() {
-        Entity entity = new entity(“Testname”);
-        assertEquals(“Testname”, entity.getName(), "Character should have a name");
+        Entity entity = new entity("TestPlayer");
+        assertEquals("Testname", entity.getName(), "Character should have a name");
     }
 
     @Test
     public void testEntityInitialHealth() {
-        Entity entity = new Entity(“Testname”);
+        Entity entity = new Entity("TestPlayer"));
         assertEquals(100, entity.getHealth(), "Character should have initial health of 100");
     }
 
     @Test
     public void testEntityInitialLevel() {
-        Entity entity = new Entity(“Hero");
+        Entity entity = new Entity("TestPlayer");
                 assertEquals(1, entity.getLevel(), "Character should have initial level of 1");
     }
 }

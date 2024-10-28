@@ -15,7 +15,7 @@ public class PlayerClassTest {
 
     @Test
     public void testInitialExperience() {
-        assertEquals(0, player.getExperience(), “Base experience should be 0");
+        assertEquals(0, player.getExperience(), "Base experience should be 0");
     }
 
     @Test
