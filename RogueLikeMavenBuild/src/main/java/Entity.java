@@ -1,5 +1,5 @@
 package RogueLikeMavenBuild.src.main.java;
-
+//test
 public class Entity {
     private String name;
     private int level;
