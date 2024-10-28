@@ -1,14 +1,17 @@
 package RogueLikeMavenBuild.src.main.java;
 
-public class Character {
+public class Entity {
     private String name;
     private int level;
+    private int experience;
     private int health;
 
-    public Character(String name) {
+    public Entity(String name, Race race) {
         this.name = name;
         this.level = 1;
+        this.experience = 0;
         this.health = 100;
+        this.race = race;
     }
 
     public String getName() {
@@ -19,12 +22,19 @@ public class Character {
         return this.level;
     }
 
+    public int getExperience() {
+        return this.experience;
+    }
+
     public int getHealth() {
         return this.health;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
+    protected void levelUp() {
+        this.level++;
     }
+
+
 }
+
 
