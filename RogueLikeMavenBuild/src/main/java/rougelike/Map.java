@@ -1,4 +1,4 @@
-package RogueLikeMavenBuild.src.main.java;
+package rougelike;
 
 public class Map {
     private Terrain[][] map;

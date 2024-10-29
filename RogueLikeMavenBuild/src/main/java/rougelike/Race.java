@@ -1,4 +1,4 @@
-package RogueLikeMavenBuild.src.main.java;
+package rougelike;
 
 public abstract class Race {
     private final double healthModifier;
@@ -37,7 +37,7 @@ public abstract class Race {
 }
 
 /*
-Race examples:
+rougelike.Race examples:
 
 Human
 Elf

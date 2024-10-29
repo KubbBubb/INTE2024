@@ -1,10 +1,10 @@
-package RogueLikeMavenBuild.src.main.java;
+package rougelike;
 
 public abstract class Profession {
 }
 
 /*
-Profession examples:
+rougelike.Profession examples:
 
 Swordsman
 Archer

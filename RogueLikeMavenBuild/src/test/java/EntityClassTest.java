@@ -1,14 +1,14 @@
-package RogueLikeMavenBuild.src.test.java;
 
-import RogueLikeMavenBuild.src.main.java.Character;
 import org.junit.jupiter.api.Test;
+import rougelike.Entity;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class EntityTest {
 
     @Test
     public void testEntityHasName() {
-        Entity entity = new entity("TestPlayer");
+        Entity entity = new Entity("TestPlayer");
         assertEquals("Testname", entity.getName(), "Character should have a name");
     }
 

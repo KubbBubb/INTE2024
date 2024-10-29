@@ -1,6 +1,5 @@
-package RogueLikeMavenBuild.src.main.java.races;
-
-import RogueLikeMavenBuild.src.main.java.Race;
+package rougelike.races;
+import rougelike.Race;
 
 // Elves have low health but are very agile and stronger than usual
 public class Elf extends Race {

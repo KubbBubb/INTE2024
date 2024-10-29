@@ -1,4 +1,4 @@
-package RogueLikeMavenBuild.src.main.java;
+package rougelike;
 
 import java.util.ArrayList;
 

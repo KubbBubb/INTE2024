@@ -1,6 +1,5 @@
-package RogueLikeMavenBuild.src.main.java.races;
-
-import RogueLikeMavenBuild.src.main.java.Race;
+package rougelike.races;
+import rougelike.Race;
 
 // Dwarves have more brute strength and health but lacking in speed and stamina as well as magic
 public class Dwarf extends Race {

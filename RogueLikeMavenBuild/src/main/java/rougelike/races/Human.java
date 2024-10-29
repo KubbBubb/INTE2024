@@ -1,6 +1,5 @@
-package RogueLikeMavenBuild.src.main.java.races;
-
-import RogueLikeMavenBuild.src.main.java.Race;
+package rougelike.races;
+import rougelike.Race;
 
 // Humans are balanced in everything with equal modifiers
 public class Human extends Race {

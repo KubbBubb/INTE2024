@@ -1,4 +1,5 @@
-package RogueLikeMavenBuild.src.main.java;
+package rougelike;
+
 import java.util.Random;
 
 public class MapGenerator {

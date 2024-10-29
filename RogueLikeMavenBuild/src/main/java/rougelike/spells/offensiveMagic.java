@@ -1,6 +1,5 @@
-package RogueLikeMavenBuild.src.main.java.spells;
-
-import RogueLikeMavenBuild.src.main.java.Magic;
+package rougelike.spells;
+import rougelike.Magic;
 
 public class offensiveMagic extends Magic {
 

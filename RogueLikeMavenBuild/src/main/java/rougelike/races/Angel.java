@@ -1,6 +1,5 @@
-package RogueLikeMavenBuild.src.main.java.races;
-
-import RogueLikeMavenBuild.src.main.java.Race;
+package rougelike.races;
+import rougelike.Race;
 
 // Angels are mythical creatures that are weak in strength but have strong magic
 public class Angel extends Race {

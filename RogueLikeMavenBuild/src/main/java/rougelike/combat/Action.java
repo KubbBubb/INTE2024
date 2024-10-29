@@ -1,6 +1,6 @@
-package RogueLikeMavenBuild.src.main.java.combat;
+package rougelike.combat;
 
-import RogueLikeMavenBuild.src.main.java.Entity;
+import rougelike.Entity;
 
 public class Action {
 

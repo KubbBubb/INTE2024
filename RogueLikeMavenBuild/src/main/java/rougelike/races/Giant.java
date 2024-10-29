@@ -1,6 +1,5 @@
-package RogueLikeMavenBuild.src.main.java.races;
-
-import RogueLikeMavenBuild.src.main.java.Race;
+package rougelike.races;
+import rougelike.Race;
 
 // Giants are incredibly strong but very slow and weak in magic
 public class Giant extends Race {

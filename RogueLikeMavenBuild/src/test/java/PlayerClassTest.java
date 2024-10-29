@@ -1,7 +1,6 @@
-package RogueLikeMavenBuild.src.test.java;
 
-import RogueLikeMavenBuild.src.main.java.Player;
-import RogueLikeMavenBuild.src.main.java.races.Dwarf;
+import rougelike.Player;
+import rougelike.races.Dwarf;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -62,6 +61,6 @@ public class PlayerClassTest {
 
         // Försöker ge experience som tar spelaren över max level 10
         player.addExperience(1000);
-        assertEquals(10, player.getLevel(), "Player level should not exceed max level of 10");
+        assertEquals(10, player.getLevel(), "rougelike.Player level should not exceed max level of 10");
     }
 }
