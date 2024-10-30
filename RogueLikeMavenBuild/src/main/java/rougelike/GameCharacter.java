@@ -18,8 +18,8 @@ public class GameCharacter {
         this.experience = 0;
         this.level = 1;
         this.health = 100 * race.getHealthModifier();
-        this.strength = 10 * (int)race.getStrengthModifier();
-        this.speed = 10 * (int)race.getSpeedModifier();
+        this.strength = 10 * race.getStrengthModifier();
+        this.speed = 10 * race.getSpeedModifier();
         this.stamina = 100;
     }
 
