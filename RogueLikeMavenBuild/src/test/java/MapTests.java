@@ -1,4 +1,3 @@
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import rougelike.Map;
@@ -39,7 +38,7 @@ class MapTests {
 
     @Test
     void testSetTerrainWithinBounds() {
-        Terrain mountain = new Terrain("Mountain", 5);
+        Terrain mountain = new Terrain("Mountain", 5,false);
         map.setTerrain(2, 2, mountain);
         Terrain retrievedTerrain = map.getTerrain(2, 2);
 
@@ -56,7 +55,7 @@ class MapTests {
 
     @Test
     void testSetTerrainOutOfBounds() {
-        Terrain mountain = new Terrain("Mountain", 5);
+        Terrain mountain = new Terrain("Mountain", 5,false);
         map.setTerrain(-1, -1, mountain);
 
         assertNull(map.getTerrain(-1, -1), "Out-of-bounds terrain should return null");
@@ -89,6 +88,27 @@ class MapTests {
             }
         }
     }
+    @Test
+    void testCalculateVisibilityThroughObjects(){
+        int playerX = 2;
+        int playerY = 2;
+        int visionRange = 1;
+        map.calculateVisibility(playerX, playerY, visionRange);
+        for (int x = playerX - visionRange; x <= playerX + visionRange; x++) {
+            for(int y = playerY - visionRange; y <= playerY + visionRange; y++) {
+                if (map.isWithinBounds(x, y)) {
+                    Terrain terrain = map.getTerrain(x, y);
+                    if (x == 3 && y == 2 && terrain.getTerrainType().equals("Mountain")) {
+                        assertTrue(terrain.isVisible(), "The mountain itself should be visible.");
+                    } else {
+                        assertTrue(terrain.isVisible(), "Tiles within vision range should be visible if unblocked");
+                    }
+
+                }
+            }
+        }
+
+    }
 
 
     @Test
@@ -98,7 +118,6 @@ class MapTests {
         int visionRange = 1;
 
         map.calculateVisibility(playerX, playerY, visionRange);
-
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 if (Math.abs(x - playerX) > visionRange || Math.abs(y - playerY) > visionRange) {
@@ -115,7 +134,6 @@ class MapTests {
     void testIsWithinBounds() {
         assertTrue(map.isWithinBounds(0, 0), "(0, 0) should be within bounds");
         assertTrue(map.isWithinBounds(width - 1, height - 1), "(width-1, height-1) should be within bounds");
-
         assertFalse(map.isWithinBounds(-1, 0), "(-1, 0) should be out of bounds");
         assertFalse(map.isWithinBounds(0, -1), "(0, -1) should be out of bounds");
         assertFalse(map.isWithinBounds(width, 0), "(width, 0) should be out of bounds");
