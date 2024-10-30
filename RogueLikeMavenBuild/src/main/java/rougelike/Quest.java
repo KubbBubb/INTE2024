@@ -3,7 +3,7 @@ package rougelike;
 public class Quest {
     private String name;
     private String description;
-    private final int rewardExperience = 30;  // Fast belöning på 30 exp
+    private final int rewardExperience = 30;  // Fast belöning på 30 exp per quest
     private boolean isCompleted;
 
     public Quest(String name, String description) {

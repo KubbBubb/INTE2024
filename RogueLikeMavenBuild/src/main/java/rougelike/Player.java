@@ -1,14 +1,13 @@
 package rougelike;
 
 public class Player extends GameCharacter {
-    private int experience;
-    private static final int EXPERIENCE_MAX = 100;
+    private double experience;
 
     public Player(String name, Race race) {
         super(name, race);
     }
 
-    public int getExperience() {
+    public double getExperience() {
         return this.experience;
     }
 

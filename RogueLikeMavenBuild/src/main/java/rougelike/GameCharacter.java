@@ -5,10 +5,11 @@ public class GameCharacter {
     private String name;
     public int level;
 
-    private int strength;
-    private int speed;
-    private int experience;
+    private double strength;
+    private double speed;
+    private double experience;
     private double health;
+    private double stamina;
     private Race race;
 
     public GameCharacter(String name, Race race) {
@@ -19,6 +20,7 @@ public class GameCharacter {
         this.health = 100 * race.getHealthModifier();
         this.strength = 10 * (int)race.getStrengthModifier();
         this.speed = 10 * (int)race.getSpeedModifier();
+        this.stamina = 100;
     }
 
     public String getName() {
@@ -33,6 +35,10 @@ public class GameCharacter {
         return this.health;
     }
 
+    public double getSpeed() {
+        return this.speed;
+    }
+
     public void setHealth(double health) {
         this.health = health;
     }
@@ -41,12 +47,16 @@ public class GameCharacter {
         return race;
     }
 
-    public int getStrength() {
+    public double getStrength() {
         return strength;
     }
 
-    public int getExperience() {
+    public double getExperience() {
         return experience;
+    }
+
+    public double getStamina() {
+        return stamina;
     }
 
     protected void levelUp() {

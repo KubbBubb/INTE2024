@@ -32,4 +32,18 @@ public class GameCharacterTest {
         Player testPlayer = new Player("TestAngel", new Angel());
         assertInstanceOf(Angel.class, testPlayer.getRace(), "Race should be Angel");
     }
+
+    @Test
+    public void testGameCharacterStrengthBasedOnRace() {
+        GameCharacter gameCharacter = new GameCharacter("TestHuman", new Human());
+        assertEquals(10 * gameCharacter.getRace().getStrengthModifier(), gameCharacter.getStrength(),
+                "Character's strength should be based on race modifier");
+    }
+
+    @Test
+    public void testGameCharacterSpeedBasedOnRace() {
+        GameCharacter gameCharacter = new GameCharacter("TestHuman", new Human());
+        assertEquals(10 * gameCharacter.getRace().getSpeedModifier(), gameCharacter.getSpeed(),
+                "Character's speed should be based on race modifier");
+    }
 }

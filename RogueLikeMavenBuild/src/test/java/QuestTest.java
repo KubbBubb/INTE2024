@@ -52,8 +52,22 @@ public class QuestTest {
         quest1.completeQuest(testPlayer);
         quest2.completeQuest(testPlayer);
 
-        // Player ska ha 40 exp kvar efter två quests och ska ha nått level 2
-        assertEquals(40, testPlayer.getExperience());
+        // Player ska ha 50 exp kvar efter två quests och ska ha nått level 2
+        assertEquals(50, testPlayer.getExperience());
         assertEquals(2, testPlayer.getLevel());
     }
+
+    @Test
+    public void testSameQuestCannotBeCompletedTwice() {
+        Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.");
+        Player testPlayer = new Player("TestPlayer", new Dwarf());
+
+        quest.completeQuest(testPlayer);  // Första avslutet av questet
+        quest.completeQuest(testPlayer);  // Andra avslutet av questet (ska inte ge mer experience)
+
+        assertTrue(quest.isCompleted());
+        assertEquals(30, testPlayer.getExperience());
+    }
+
+
 }
