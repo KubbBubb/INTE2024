@@ -10,7 +10,7 @@ public class PlayerClassTest {
 
     @BeforeEach
     public void setUp() {
-        var dwarf = new Dwarf();
+        Dwarf dwarf = new Dwarf();
         player = new Player("TestPlayer", dwarf);
     }
 

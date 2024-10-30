@@ -1,6 +1,6 @@
 package rougelike;
 
-public class Player extends Entity {
+public class Player extends GameCharacter {
     private int experience;
     private static final int EXPERIENCE_MAX = 100;
 
