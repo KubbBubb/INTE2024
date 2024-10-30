@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import rougelike.Entity;
 import rougelike.GameCharacter;
 import rougelike.Player;
 import rougelike.races.Dwarf;
