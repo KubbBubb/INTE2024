@@ -1,4 +1,3 @@
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import rougelike.Terrain;
@@ -9,7 +8,7 @@ public class TerrainTests {
     private Terrain terrain;
     @BeforeEach
     void setUp() {
-        terrain = new Terrain("Mountain", 10);
+        terrain = new Terrain("Mountain", 10,false);
     }
     @Test
     void testConstructorForTerrainType() {
@@ -63,6 +62,12 @@ public class TerrainTests {
     @Test
     void testGetHeight() {
         assertEquals(10, terrain.getHeight(), "getHeight() should return 10");
+    }
+
+    @Test
+    void testIsBlocking(){
+        assertFalse(terrain.isBlocking(),"isBlocking() should return false");
+        assertTrue(!terrain.isBlocking(),"isBlocking() should return true");
     }
 
 }
