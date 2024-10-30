@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import rougelike.Entity;
+import rougelike.GameCharacter;
 import rougelike.Player;
 import rougelike.races.Dwarf;
 import rougelike.races.Elf;
@@ -21,7 +22,7 @@ public class CombatTest {
 
 
         var pc = new Player("test pc", dwarf);
-        var npc = new Entity("test npc", elf);
+        var npc = new GameCharacter("test npc", elf);
 
         //assertEquals();
 

@@ -1,6 +1,6 @@
 package rougelike;
 
-public class Entity {
+public class GameCharacter {
 
     private String name;
     public int level;
@@ -11,7 +11,7 @@ public class Entity {
     private double health;
     private Race race;
 
-    public Entity(String name, Race race) {
+    public GameCharacter(String name, Race race) {
         this.race =  race;
         this.name = name;
         this.experience = 0;
