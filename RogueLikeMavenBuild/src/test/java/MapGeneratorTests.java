@@ -1,12 +1,10 @@
 
-package RogueLikeMavenBuild.src.test.java;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import rougelike.Map;
 import rougelike.MapGenerator;
 import rougelike.Terrain;
 
-import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
