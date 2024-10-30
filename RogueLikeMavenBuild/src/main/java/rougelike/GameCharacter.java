@@ -16,9 +16,9 @@ public class GameCharacter {
         this.name = name;
         this.experience = 0;
         this.level = 1;
-        this.health = 100 * race.getHealth();
-        this.strength = 10 * (int)race.getStrength();
-        this.speed = 10 * (int)race.getSpeed();
+        this.health = 100 * race.getHealthModifier();
+        this.strength = 10 * (int)race.getStrengthModifier();
+        this.speed = 10 * (int)race.getSpeedModifier();
     }
 
     public String getName() {

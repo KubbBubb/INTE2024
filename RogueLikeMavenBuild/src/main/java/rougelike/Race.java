@@ -15,19 +15,19 @@ public abstract class Race {
         this.magicModifier = magicModifier;
     }
 
-    public double getHealth() {
+    public double getHealthModifier() {
         return healthModifier;
     }
 
-    public double getStamina() {
+    public double getStaminaModifier() {
         return staminaModifier;
     }
 
-    public double getSpeed() {
+    public double getSpeedModifier() {
         return speedModifier;
     }
 
-    public double getStrength() {
+    public double getStrengthModifier() {
         return strengthModifier;
     }
 
