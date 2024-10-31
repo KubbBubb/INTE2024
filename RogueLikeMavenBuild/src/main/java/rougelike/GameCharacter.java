@@ -14,8 +14,10 @@ public abstract class GameCharacter {
     private SpellBook spellBook;
     private Armour armour;
     private Profession profession;
+    private Position position;
 
-    public GameCharacter(String name, Race race) {
+
+    public GameCharacter(String name, Race race,Position position) {
         this.race =  race;
         this.name = name;
         this.experience = 0;
@@ -25,6 +27,7 @@ public abstract class GameCharacter {
         this.speed = 10 * race.getSpeedModifier();
         this.stamina = 100 * race.getStaminaModifier();
         this.magic = 10 * race.getMagicModifier();
+        this.position = position;
     }
 
     public String getName() {
@@ -74,6 +77,13 @@ public abstract class GameCharacter {
     protected void levelUp() {
         this.level++;
     }
+    public void setPosition(Position position) {
+        this.position = position;
+    }
+    public Position getPosition() {
+        return position;
+    }
+
 
     public void setProfession(Profession profession) {
         this.profession = profession;
@@ -104,5 +114,9 @@ public abstract class GameCharacter {
         }
         return this.armour;
     }
+
+
+
 }
+
 

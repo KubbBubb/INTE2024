@@ -2,6 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import rougelike.Armour;
 import rougelike.Player;
+import rougelike.Position;
 import rougelike.armour.Chestplate;
 import rougelike.armour.Helmet;
 import rougelike.armour.Trinket;
@@ -18,7 +19,7 @@ public class ArmourClassTest {
 
     @BeforeEach
     public void setUp() {
-        player = new Player("TestPlayer", new Dwarf());
+        player = new Player("TestPlayer", new Dwarf(),new Position(0,0));
 
         helmet = new Helmet();
         chestplate = new Chestplate();
