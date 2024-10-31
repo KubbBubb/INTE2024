@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import rougelike.races.Angel;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -27,5 +28,9 @@ public class AngelTest {
         System.setOut(System.out);
 
         assertEquals("Flap, flap, flap.", outputStream.toString().trim());
+    }
+    @Test
+    public void testAngelAccessTypes() {
+        assertTrue(testAngel.getCharacterType().containsAll(Set.of("walk", "fly")), "Angel should be able walk and fly");
     }
 }

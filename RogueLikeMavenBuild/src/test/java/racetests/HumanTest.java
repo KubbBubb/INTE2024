@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import rougelike.races.Human;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -27,5 +28,9 @@ public class HumanTest {
         System.setOut(System.out);
 
         assertEquals("Greetings!", outputStream.toString().trim());
+    }
+    @Test
+    public void testHumanAccessTypes() {
+        assertTrue(testHuman.getCharacterType().containsAll(Set.of("walk", "swim")), "Human should be able to walk and swim");
     }
 }

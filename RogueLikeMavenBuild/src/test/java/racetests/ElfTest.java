@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import rougelike.races.Elf;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -27,5 +28,9 @@ public class ElfTest {
         System.setOut(System.out);
 
         assertEquals("Whoosh!", outputStream.toString().trim());
+    }
+    @Test
+    public void testElfAccessTypes() {
+        assertTrue(testElf.getCharacterType().containsAll(Set.of("walk", "swim")), "Elf should have access to walk and swim");
     }
 }

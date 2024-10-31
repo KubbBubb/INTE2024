@@ -38,7 +38,7 @@ class MapTests {
 
     @Test
     void testSetTerrainWithinBounds() {
-        Terrain mountain = new Terrain("Mountain", 5,false);
+        Terrain mountain = new Terrain("Mountain", 5,false,"fly");
         map.setTerrain(2, 2, mountain);
         Terrain retrievedTerrain = map.getTerrain(2, 2);
 
@@ -55,7 +55,7 @@ class MapTests {
 
     @Test
     void testSetTerrainOutOfBounds() {
-        Terrain mountain = new Terrain("Mountain", 5,false);
+        Terrain mountain = new Terrain("Mountain", 5,false,"fly");
         map.setTerrain(-1, -1, mountain);
 
         assertNull(map.getTerrain(-1, -1), "Out-of-bounds terrain should return null");

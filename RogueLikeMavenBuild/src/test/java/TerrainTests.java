@@ -8,11 +8,15 @@ public class TerrainTests {
     private Terrain terrain;
     @BeforeEach
     void setUp() {
-        terrain = new Terrain("Mountain", 10,false);
+        terrain = new Terrain("Mountain", 10,false,"fly");
     }
     @Test
     void testConstructorForTerrainType() {
         assertEquals("Mountain", terrain.getTerrainType(), "Constructor should set the  terrain to Mountain");
+    }
+    @Test
+    void testConstructorForAccessType() {
+        assertEquals("fly", terrain.getAccessType(), "Constructor should set the accessType to 'fly'");
     }
     @Test
     void testConstructorForHeight() {
@@ -68,6 +72,11 @@ public class TerrainTests {
     void testIsBlocking(){
         assertFalse(terrain.isBlocking(),"isBlocking() should return false");
         assertTrue(!terrain.isBlocking(),"isBlocking() should return true");
+    }
+    @Test
+    void testGetAccessType() {
+        assertEquals("fly", terrain.getAccessType(), "getAccessType() should return 'fly'");
+
     }
 
 }

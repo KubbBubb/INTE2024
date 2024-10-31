@@ -12,13 +12,13 @@ public class MapGenerator {
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 if ((x + y) % 4 == 0) {
-                    map.setTerrain(x, y, new Terrain("Water", 0, false));
+                    map.setTerrain(x, y, new Terrain("Water", 0, false,"swim"));
                 } else if ((x + y) % 4 == 1) {
-                    map.setTerrain(x, y, new Terrain("Grass", 1, false));
+                    map.setTerrain(x, y, new Terrain("Grass", 1, false,"walk"));
                 } else if ((x + y) % 4 == 2) {
-                    map.setTerrain(x, y, new Terrain("Mountain", 3, true));
+                    map.setTerrain(x, y, new Terrain("Mountain", 3, true,"fly"));
                 } else {
-                    map.setTerrain(x, y, new Terrain("House", 2, false));
+                    map.setTerrain(x, y, new Terrain("House", 2, false,"walk"));
                 }
             }
         }

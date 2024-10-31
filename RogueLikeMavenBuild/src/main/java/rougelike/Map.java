@@ -13,7 +13,7 @@ public class Map {
 
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
-                map[x][y] = new Terrain("Grass", 1,false);
+                map[x][y] = new Terrain("Grass", 1,false,"walk");
             }
         }
     }

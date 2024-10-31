@@ -28,4 +28,8 @@ public class GiantTest {
 
         assertEquals("Zzz...", outputStream.toString().trim());
     }
+    @Test
+    public void testGiantAccessTypes() {
+        assertTrue(testGiant.getCharacterType().contains("walk"), "Giant should be able walk");
+    }
 }

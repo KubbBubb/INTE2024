@@ -28,4 +28,8 @@ public class DwarfTest {
 
         assertEquals("Tick!", outputStream.toString().trim());
     }
+    @Test
+    public void testDwarfAccessTypes() {
+        assertTrue(testDwarf.getCharacterType().contains("walk"), "Dwarf should be able to walk");
+    }
 }

@@ -6,22 +6,17 @@ public class Terrain {
     private String terrainType;
     private int height;
     private boolean isBlocking;
-    //private String accessType;
+    private String accessType;
 
-    //public Terrain(String terrainType, int height) {
-    //   this(terrainType, height,"walk");
-    // }
-    public Terrain(String terrainType, int height,boolean isBlocking) {
+    public Terrain(String terrainType, int height,boolean isBlocking,String accessType) {
         this.terrainType = terrainType;
         this.height = height;
         this.isVisible = false;
         this.isExplored = false;
         this.isBlocking = isBlocking;
-        //this.accessType = accessType;
+        this.accessType = accessType;
     }
-    // public boolean isAccessibleBy(Entity entity) {
-    //  return entity.getCharacterType().equals(this.accessType) || "any".equals(this.accessType);
-    // }
+
 
 
     public boolean isVisible() {
@@ -50,5 +45,9 @@ public class Terrain {
 
     public boolean isBlocking() {
         return isBlocking;
+    }
+
+    public String getAccessType() {
+            return accessType;
     }
 }

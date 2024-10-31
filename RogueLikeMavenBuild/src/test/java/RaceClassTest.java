@@ -2,6 +2,8 @@ import rougelike.Race;
 import rougelike.races.*;
 import org.junit.jupiter.api.Test;
 
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 // Testar de olika metoderna som Rasklassen innehåller
@@ -34,5 +36,13 @@ public class RaceClassTest {
     public void testGetMagicModifier() {
         Race testAngel = new Angel();
         assertEquals(testAngel.getMagicModifier(), 2);
+    }
+    @Test
+    public void testAccessTypes() {
+        Race Angel = new Angel();
+        assertTrue(Angel.getCharacterType().containsAll(Set.of("walk", "fly")), "Angel should be able to walk and fly");
+
+        Race testHuman = new Human();
+        assertTrue(testHuman.getCharacterType().containsAll(Set.of("walk", "swim")), "Human should be able to to walk and swim");
     }
 }
