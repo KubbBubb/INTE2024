@@ -62,16 +62,20 @@ public abstract class GameCharacter {
     public double getStamina() {
         return stamina;
     }
+
+    public double getMagic() {
+        return magic;
+    }
+
     public void setLevel(int newLevel) {
         this.level = newLevel;
     }
-
 
     protected void levelUp() {
         this.level++;
     }
 
-    private void setProfession(Profession profession) {
+    public void setProfession(Profession profession) {
         this.profession = profession;
         this.health = health * profession.getHealthModifier();
         this.strength = strength * profession.getStrengthModifier();

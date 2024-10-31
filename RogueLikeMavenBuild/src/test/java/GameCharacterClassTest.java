@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import rougelike.GameCharacter;
 import rougelike.NonPlayableCharacter;
 import rougelike.Player;
+import rougelike.professions.Wizard;
 import rougelike.races.Angel;
 import rougelike.races.Human;
 
@@ -46,5 +47,30 @@ public class GameCharacterClassTest {
         NonPlayableCharacter npc = new NonPlayableCharacter("TestPlayer1", new Human());
         assertEquals(10 * npc.getRace().getSpeedModifier(), npc.getSpeed(),
                 "Character's speed should be based on race modifier");
+    }
+
+    @Test
+    public void testGameCharacterProfessionBoost() {
+        NonPlayableCharacter npc1 = new NonPlayableCharacter("TestPlayer1", new Human());
+        NonPlayableCharacter npc2 = new NonPlayableCharacter("TestPlayer1", new Human());
+        npc1.setProfession(new Wizard());
+
+        assertEquals(npc2.getHealth() * 0.8, npc1.getHealth());
+        assertEquals(npc2.getStrength() * 0.5, npc1.getStrength());
+        assertEquals(npc2.getMagic() * 1.5, npc1.getMagic());
+    }
+
+    @Test
+    public void testGameCharacterSuccessfulGetProfession() {
+        NonPlayableCharacter npc = new NonPlayableCharacter("TestPlayer1", new Human());
+        npc.setProfession(new Wizard());
+
+        assertInstanceOf(Wizard.class, npc.getProfession(), "Profession should be wizard");
+    }
+
+    @Test
+    public void testGameCharacterFailedGetProfession() {
+        NonPlayableCharacter npc = new NonPlayableCharacter("TestPlayer1", new Human());
+        assertThrows(IllegalStateException.class, npc::getProfession);
     }
 }
