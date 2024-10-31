@@ -98,11 +98,5 @@ public abstract class GameCharacter {
         this.speed = speed * armour.getSpeedModifier();
     }
 
-    public Armour getArmour() {
-        if (this.armour == null) {
-            throw new IllegalStateException("Character has no armour.");
-        }
-        return this.armour;
-    }
 }
 
