@@ -7,7 +7,7 @@ import rougelike.races.Human;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class GameCharacterTest {
+public class GameCharacterClassTest {
 
     @Test
     public void testGameCharacterHasName() {

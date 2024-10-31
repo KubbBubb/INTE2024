@@ -5,7 +5,7 @@ import rougelike.races.Dwarf;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class QuestTest {
+public class QuestClassTest {
 
     //skapar först testklasser - sedan skapar jag kod i klassen Quest som gör att koden kan köras steg för steg.
 
@@ -99,23 +99,33 @@ public class QuestTest {
         assertFalse(quest.isCompleted());
     }
 
+    // Testar att ett quest markeras som misslyckat korrekt
     @Test
-    public void testQuestFailureWithExperienceLoss() {
-        Quest quest = new Quest("Retrieve the ancient relic", "The relic has been lost in a dangerous dungeon.", 1);
+    public void testQuestFailureStatus() {
+        Quest quest = new Quest("Defeat the evil boss", "It's time to defeat your enemy, the evil boss.", 1);
+        Player testPlayer = new Player("TestPlayer", new Dwarf());
+
+        quest.failQuest(testPlayer);  // Failar questet
+
+        // Kontrollerar att questet är markerat som failed
+        assertTrue(quest.isFailed());
+        assertFalse(quest.isCompleted());
+
+        // Försöker slutföra ett misslyckat quest - ska inte gå
+        quest.completeQuest(testPlayer);
+        assertFalse(quest.isCompleted());
+    }
+
+    @Test
+    public void testExperienceLossOnQuestFailure() {
+        Quest quest = new Quest("Defeat the evil boss", "It's time to defeat your enemy, the evil boss.", 1);
         Player testPlayer = new Player("TestPlayer", new Dwarf());
         testPlayer.addExperience(50);  // Player startar med 50 exp
 
-        quest.failQuest(testPlayer);  // Player failar quest
+        quest.failQuest(testPlayer);  // Misslyckas med questet
 
-        // Kontrollerar att player failat questet och att player då förlorar exp
-        assertTrue(quest.isFailed());
-        assertEquals(30, testPlayer.getExperience());  // playern ska förlora 20 exp
-        assertFalse(quest.isCompleted());
-
-        // Det ska inte gå att lämna in ett quest som failat
-        quest.completeQuest(testPlayer);
-        assertFalse(quest.isCompleted());
-        assertEquals(30, testPlayer.getExperience());  // Ingen exp ska läggas till
+        // Kontrollera att spelaren har förlorat 20 erfarenhetspoäng vid misslyckande
+        assertEquals(30, testPlayer.getExperience());  // Player ska ha tappat 20 exp
     }
 
 
