@@ -1,0 +1,34 @@
+<changelist name="Uncommitted_changes_before_Update_at_2024-10-31_13_51_[Changes]" date="1730379111032" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-10-31_13_51_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2024-10-31 13:51 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/MapGenerator.class" />
+    <option name="AFTER_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/MapGenerator.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-10-31_13_51_[Changes]/MapGenerator.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/races/Dwarf.class" />
+    <option name="AFTER_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/races/Dwarf.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-10-31_13_51_[Changes]/Dwarf.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/Map.class" />
+    <option name="AFTER_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/Map.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-10-31_13_51_[Changes]/Map.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/races/Human.class" />
+    <option name="AFTER_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/races/Human.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-10-31_13_51_[Changes]/Human.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/races/Elf.class" />
+    <option name="AFTER_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/races/Elf.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-10-31_13_51_[Changes]/Elf.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/Terrain.class" />
+    <option name="AFTER_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/Terrain.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-10-31_13_51_[Changes]/Terrain.class" />
+  </binary>
+</changelist>

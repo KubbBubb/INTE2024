@@ -1,0 +1,70 @@
+<changelist name="Uncommitted_changes_before_Update_at_2024-10-31_22_43_[Changes]" date="1730411004259" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2024-10-31_22_43_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2024-10-31 22:43 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/Magic.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/combat/Action.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/test-classes/racetests/DwarfTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/races/Giant.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/races/Angel.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/GameCharacter.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/Map.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/races/Dwarf.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/Race.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/Terrain.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/test-classes/racetests/HumanTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/test-classes/racetests/GiantTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/Combat.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/Player.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/test-classes/racetests/ElfTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/test-classes/racetests/AngelTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/SpellBook.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/Profession.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/races/Elf.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/races/Human.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/classes/rougelike/MapGenerator.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="RogueLikeMavenBuild/target/test-classes/RaceClassTest.class" />
+  </binary>
+</changelist>

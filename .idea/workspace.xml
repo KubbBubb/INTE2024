@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="72c91867-2532-4a28-88a8-bc8199696e74" name="Changes" comment="Lägger till en massa ny funktion till npc-klassen såsom slumpmässiga svar på olika prompts och en prompt som varierar beroende på npcns hp">
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/Combat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/GameCharacter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/Magic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/Map.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/MapGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/Profession.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/Race.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/SpellBook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/Terrain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/combat/Action.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/races/Angel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/races/Dwarf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/races/Elf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/races/Giant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/classes/rougelike/races/Human.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/test-classes/RaceClassTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/test-classes/racetests/AngelTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/test-classes/racetests/DwarfTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/test-classes/racetests/ElfTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/test-classes/racetests/GiantTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/target/test-classes/racetests/HumanTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Abryn&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/KubbBubb/INTE2024.git&quot;,
+    &quot;accountId&quot;: &quot;6b348d3b-cd64-4912-9db1-abfa7b56ad4e&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2oCUwEtIrMzwdHa2nobURCsOVPz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.All in RogueLikeMavenBuild.executor": "Coverage",
+    "JUnit.CombatTest.testSameCombatSpeedInitiative.executor": "Run",
+    "JUnit.GameCharacterClassTest.testGameCharacterFailedGetProfession.executor": "Run",
+    "JUnit.GameCharacterClassTest.testGameCharacterProfessionBoost.executor": "Run",
+    "JUnit.GameCharacterClassTest.testGameCharacterSuccessfulGetProfession.executor": "Run",
+    "JUnit.NonPlayableCharacterClassTest.executor": "Run",
+    "JUnit.NonPlayableCharacterClassTest.getDialogues.executor": "Coverage",
+    "JUnit.NonPlayableCharacterClassTest.testAddRandomDialogue.executor": "Run",
+    "JUnit.NonPlayableCharacterClassTest.testGetRandomReplyMultipleOptions.executor": "Run",
+    "JUnit.NonPlayableCharacterClassTest.testGetRandomReplyWithNoReplies.executor": "Run",
+    "JUnit.NonPlayableCharacterClassTest.testGetReply.executor": "Run",
+    "JUnit.NonPlayableCharacterClassTest.testHealthPrompt.executor": "Run",
+    "JUnit.PlayerClassTest.executor": "Run",
+    "JUnit.QuestTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.NonPlayableCharacterClassTest">
+    <configuration name="NonPlayableCharacterClassTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RogueLikeMavenBuild" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="NonPlayableCharacterClassTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NonPlayableCharacterClassTest.testAddRandomDialogue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RogueLikeMavenBuild" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="NonPlayableCharacterClassTest" />
+      <option name="METHOD_NAME" value="testAddRandomDialogue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NonPlayableCharacterClassTest.testGetRandomReplyMultipleOptions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RogueLikeMavenBuild" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="NonPlayableCharacterClassTest" />
+      <option name="METHOD_NAME" value="testGetRandomReplyMultipleOptions" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NonPlayableCharacterClassTest.testGetRandomReplyWithNoReplies" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RogueLikeMavenBuild" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="NonPlayableCharacterClassTest" />
+      <option name="METHOD_NAME" value="testGetRandomReplyWithNoReplies" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NonPlayableCharacterClassTest.testHealthPrompt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RogueLikeMavenBuild" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="NonPlayableCharacterClassTest" />
+      <option name="METHOD_NAME" value="testHealthPrompt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.NonPlayableCharacterClassTest" />
+        <item itemvalue="JUnit.NonPlayableCharacterClassTest.testGetRandomReplyWithNoReplies" />
+        <item itemvalue="JUnit.NonPlayableCharacterClassTest.testGetRandomReplyMultipleOptions" />
+        <item itemvalue="JUnit.NonPlayableCharacterClassTest.testAddRandomDialogue" />
+        <item itemvalue="JUnit.NonPlayableCharacterClassTest.testHealthPrompt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL−00001" summary="Lägger till wizard och ändrar lite i professionklassen.">
+      <option name="closed" value="true" />
+      <created>1730306673263</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1730306673263</updated>
+    </task>
+    <task id="LOCAL−00002" summary="Lägger till NPC test och klass samt ändrar värden från int till double i gamecharacter klassen">
+      <option name="closed" value="true" />
+      <created>1730307879378</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1730307879378</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="72c91867-2532-4a28-88a8-bc8199696e74" name="Changes" comment="Lägger till NPC test och klass samt ändrar värden från int till double i gamecharacter klassen" />
+      <created>1730373289317</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730373289317</updated>
+    </task>
+    <task id="LOCAL−00003" summary="Uppdaterar NPC klassen och testklassen för den">
+      <option name="closed" value="true" />
+      <created>1730379105042</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1730379105042</updated>
+    </task>
+    <task id="LOCAL−00004" summary="Uppdaterar playerclasstest">
+      <option name="closed" value="true" />
+      <created>1730382139700</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1730382139700</updated>
+    </task>
+    <task id="LOCAL−00005" summary="Uppdaterar gamecharacter för att lägga till professions.">
+      <option name="closed" value="true" />
+      <created>1730382748268</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1730382748268</updated>
+    </task>
+    <task id="LOCAL−00006" summary="Uppdaterar gamecharacterclasstest och gamecharacter för att introducera professions.">
+      <option name="closed" value="true" />
+      <created>1730383895484</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1730383895484</updated>
+    </task>
+    <task id="LOCAL−00007" summary="Lägger till en massa ny funktion till npc-klassen såsom slumpmässiga svar på olika prompts och en prompt som varierar beroende på npcns hp">
+      <option name="closed" value="true" />
+      <created>1730388712456</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1730388712456</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Lägger till wizard och ändrar lite i professionklassen." />
+    <MESSAGE value="Lägger till NPC test och klass samt ändrar värden från int till double i gamecharacter klassen" />
+    <MESSAGE value="Uppdaterar NPC klassen och testklassen för den" />
+    <MESSAGE value="Uppdaterar playerclasstest" />
+    <MESSAGE value="Uppdaterar gamecharacter för att lägga till professions." />
+    <MESSAGE value="Uppdaterar gamecharacterclasstest och gamecharacter för att introducera professions." />
+    <MESSAGE value="Lägger till en massa ny funktion till npc-klassen såsom slumpmässiga svar på olika prompts och en prompt som varierar beroende på npcns hp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lägger till en massa ny funktion till npc-klassen såsom slumpmässiga svar på olika prompts och en prompt som varierar beroende på npcns hp" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/INTE2024$NonPlayableCharacterClassTest_getDialogues.ic" NAME="NonPlayableCharacterClassTest.getDialogues Coverage Results" MODIFIED="1730378837376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/INTE2024$All_in_RogueLikeMavenBuild.ic" NAME="All in RogueLikeMavenBuild Coverage Results" MODIFIED="1730379145986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+  </component>
+</project>

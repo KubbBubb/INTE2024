@@ -1,0 +1,16 @@
+Index: RogueLikeMavenBuild/src/main/java/rougelike/Quest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package rougelike;\r\n\r\npublic class Quest {\r\n    private String name;\r\n    private String description;\r\n    private final int rewardExperience = 30;  // Fast belöning på 30 exp per quest\r\n    private boolean isCompleted;\r\n    private int levelRequirement = 1;\r\n    private boolean isFailed;\r\n\r\n    public Quest(String name, String description, int levelRequirement) {\r\n        this.name = name;\r\n        this.description = description;\r\n        this.isCompleted = false;\r\n        this.isFailed = false;\r\n    }\r\n\r\n    public String getName() {\r\n        return name;\r\n    }\r\n\r\n    public String getDescription() {\r\n        return description;\r\n    }\r\n\r\n    public int getRewardExperience() {\r\n        return rewardExperience;\r\n    }\r\n\r\n    public boolean isCompleted() {\r\n        return isCompleted;\r\n    }\r\n\r\n    public boolean isFailed() {\r\n        return isFailed;\r\n    }\r\n\r\n    public void resetQuest() {\r\n        isCompleted = false;\r\n        isFailed = false;\r\n    }\r\n\r\n    public void setLevelRequirement(int levelRequirement) {\r\n        this.levelRequirement = levelRequirement;\r\n    }\r\n\r\n    public void completeQuest(Player player) {\r\n        if (player == null) {\r\n            throw new IllegalArgumentException(\"Player cannot be null\");\r\n        }\r\n\r\n        // Tillåter bara att lämna in questet om det varken är misslyckat eller redan slutfört\r\n        if (!isCompleted && !isFailed && player.getLevel() >= levelRequirement) {\r\n            player.addExperience(rewardExperience);\r\n            isCompleted = true;\r\n        }\r\n    }\r\n\r\n    public void failQuest(Player player) {\r\n        if (player == null) {\r\n            throw new IllegalArgumentException(\"Player cannot be null\");\r\n        }\r\n\r\n        if (!isCompleted && !isFailed) {\r\n            player.addExperience(-20);  // Player tappar 20 exp\r\n            isFailed = true;\r\n        }\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RogueLikeMavenBuild/src/main/java/rougelike/Quest.java b/RogueLikeMavenBuild/src/main/java/rougelike/Quest.java
+--- a/RogueLikeMavenBuild/src/main/java/rougelike/Quest.java	(revision ab1f0c9af9a77a44e0f4c9f30d93dded007c3d78)
++++ b/RogueLikeMavenBuild/src/main/java/rougelike/Quest.java	(date 1730387726835)
+@@ -66,5 +66,4 @@
+             isFailed = true;
+         }
+     }
+-
+ }
