@@ -42,10 +42,6 @@ public abstract class Race {
     public Set<String> getCharacterType() {
         return characterType;
     }
-
-    public boolean canAccess(String accessType) {
-        return characterType.contains(accessType);
-    }
 }
 
 /*
