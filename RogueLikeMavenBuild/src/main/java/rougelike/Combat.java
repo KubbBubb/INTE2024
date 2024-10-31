@@ -50,8 +50,8 @@ public class Combat {
         var human = new Human();
         var giant = new Giant();
 
-        var pc = new Player("pc", giant);
-        var npc = new NonPlayableCharacter("npc", human);
+        var pc = new Player("pc", giant,new Position(0,0));
+        var npc = new NonPlayableCharacter("npc", human,new Position(2,2));
 
         fight(pc, npc);
 

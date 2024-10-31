@@ -1,8 +1,8 @@
 package rougelike;
 
 public class Quest {
-    private String name;
-    private String description;
+    private final String name;
+    private final String description;
     private final int rewardExperience = 30;  // Fast belöning på 30 exp per quest
     private boolean isCompleted;
     private int levelRequirement = 1;
@@ -49,7 +49,7 @@ public class Quest {
             throw new IllegalArgumentException("Player cannot be null");
         }
 
-        // Tillåter bara att lämna in questet om det varken är misslyckat eller redan slutfört
+        // Tillåter bara att lämna in questet om det varken är misslyckat eller redan slutfört samt om playerns level är tillräcklig
         if (!isCompleted && !isFailed && player.getLevel() >= levelRequirement) {
             player.addExperience(rewardExperience);
             isCompleted = true;

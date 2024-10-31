@@ -58,7 +58,7 @@ public class TerrainTests {
     }
 
     @Test
-    void testSetExploredToFalse() {
+     void testSetExploredToFalse() {
         terrain.setExplored(true);
         terrain.setExplored(false);
         assertFalse(terrain.isExplored(), "setExplored(false) should make isExplored() return false");

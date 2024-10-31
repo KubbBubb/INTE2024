@@ -2,6 +2,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import rougelike.NonPlayableCharacter;
 import rougelike.Player;
+import rougelike.Position;
 import rougelike.races.Dwarf;
 import rougelike.races.Elf;
 import rougelike.races.Giant;
@@ -21,8 +22,8 @@ public class CombatTest {
 
         var human = new Human();
 
-        var pc = new Player("test pc", human);
-        var npc = new NonPlayableCharacter("test npc", human);
+        var pc = new Player("test pc", human,new Position(0,0));
+        var npc = new NonPlayableCharacter("test npc", human,new Position(0,0));
 
         double remainingHp =  npc.getHealth() - (npc.getRace().getStrengthModifier() * 10);
         hit(pc, npc);
@@ -38,8 +39,8 @@ public class CombatTest {
         var human = new Human();
         var elf = new Elf();
 
-        var pc = new Player("test pc", elf);
-        var npc = new NonPlayableCharacter("test npc", human);
+        var pc = new Player("test pc", elf,new Position(0,0));
+        var npc = new NonPlayableCharacter("test npc", human,new Position(0,0));
 
         assertEquals(pc, initiativeOrder(pc, npc));
 
@@ -52,8 +53,8 @@ public class CombatTest {
         var human = new Human();
         var dwarf = new Dwarf();
 
-        var pc = new Player("test pc", dwarf);
-        var npc = new NonPlayableCharacter("test npc", human);
+        var pc = new Player("test pc", dwarf,new Position(1,1));
+        var npc = new NonPlayableCharacter("test npc", human,new Position(0,0));
 
         assertEquals(npc, initiativeOrder(pc, npc));
 
@@ -66,8 +67,8 @@ public class CombatTest {
         var human = new Human();
         var humanTwo = new Human();
 
-        var pc = new Player("test pc", humanTwo);
-        var npc = new NonPlayableCharacter("test npc", human);
+        var pc = new Player("test pc", humanTwo,new Position(1,1));
+        var npc = new NonPlayableCharacter("test npc", human,new Position(0,0));
 
         assertEquals(npc, initiativeOrder(pc, npc));
 
@@ -80,8 +81,8 @@ public class CombatTest {
         var human = new Human();
         var giant = new Giant();
 
-        var pc = new Player("test pc", human);
-        var npc = new NonPlayableCharacter("test unga bunga", giant);
+        var pc = new Player("test pc", human,new Position(1,1));
+        var npc = new NonPlayableCharacter("test unga bunga", giant,new Position(0,0));
 
         pc.setHealth(10);
         pc.setLevel(2);
@@ -101,8 +102,8 @@ public class CombatTest {
         var human = new Human();
         var giant = new Giant();
 
-        var pc = new Player("pc", giant);
-        var npc = new NonPlayableCharacter("npc", human);
+        var pc = new Player("pc", giant,new Position(1,1));
+        var npc = new NonPlayableCharacter("npc", human,new Position(0,0));
 
         fight(pc, npc);
 

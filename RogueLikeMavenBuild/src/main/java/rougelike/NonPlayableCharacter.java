@@ -5,10 +5,12 @@ import java.util.*;
 public class NonPlayableCharacter extends GameCharacter {
     private final HashMap<String, String> dialogues;
     private final HashMap<String, List<String>> randomDialogues = new HashMap<>();
+    private final Position standingPosition;
 
-    public NonPlayableCharacter(String name, Race race) {
-        super(name, race);
+    public NonPlayableCharacter(String name, Race race,Position standingPosition) {
+        super(name, race,standingPosition);
         this.dialogues = new HashMap<>();
+        this.standingPosition = standingPosition;
 
         addDialogue("What is your strength?", "My strength is " + getStrength() + ".");
         addDialogue("What is your speed?", "My speed is " + getSpeed() + ".");
@@ -47,5 +49,9 @@ public class NonPlayableCharacter extends GameCharacter {
     public String getRandomReply(String prompt) {
         List<String> replies = randomDialogues.get(prompt);
         return (replies != null && !replies.isEmpty()) ? replies.get(new Random().nextInt(replies.size())) : "I don't really understand...";
+    }
+
+    public Position getStandingPosition() {
+        return this.standingPosition;
     }
 }
