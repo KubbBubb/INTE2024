@@ -9,6 +9,7 @@ public class QuestClassTest {
 
     //skapar först testklasser - sedan skapar jag kod i klassen Quest som gör att koden kan köras steg för steg.
 
+    // Testar att starta ett quest
     @Test
     public void testQuestStart() {
         Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.", 1);
@@ -18,6 +19,7 @@ public class QuestClassTest {
         assertFalse(quest.isCompleted());
     }
 
+    // Testar att man får exp när man slutför ett quest
     @Test
     public void testQuestCompletionGivesExperience() {
         Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.", 1);
@@ -29,6 +31,7 @@ public class QuestClassTest {
         assertEquals(30, testPlayer.getExperience());  // Spelaren ska få 30 exp
     }
 
+    // Testar att man levlar upp korrekt när man slutför ett quest
     @Test
     public void testQuestLevelUpOnCompletion() {
         Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.", 1);
@@ -41,6 +44,7 @@ public class QuestClassTest {
         assertEquals(2, testPlayer.getLevel());  // Player ska nu vara level 2
     }
 
+    // Testar att man levlar upp korrekt när man slutför flera quests
     @Test
     public void testMultipleQuestsLevelUp() {
         Quest quest1 = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.",1);
@@ -58,6 +62,7 @@ public class QuestClassTest {
         assertEquals(2, testPlayer.getLevel());
     }
 
+    // Testar att man inte kan completa samma quest fler gånger
     @Test
     public void testSameQuestCannotBeCompletedTwice() {
         Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.", 1);
@@ -70,6 +75,7 @@ public class QuestClassTest {
         assertEquals(30, testPlayer.getExperience());
     }
 
+    // Testar att completa ett quest som har ett levelkrav
     @Test
     public void testQuestCompletionWithLevelRequirement() {
         final int REQUIRED_LEVEL = 5;
@@ -87,6 +93,7 @@ public class QuestClassTest {
         assertEquals(0, testPlayer.getExperience());  // Ingen exp ska ges om questet ej kan slutföras
     }
 
+    // Testar att ett quest kan resettas
     @Test
     public void testResetQuest() {
         Quest quest = new Quest("Defeat the evil boss", "It's time to defeat your enemy, the evil boss.", 1);
@@ -116,6 +123,7 @@ public class QuestClassTest {
         assertFalse(quest.isCompleted());
     }
 
+    // Testar att man tappar exp som planerat när man failar ett quest
     @Test
     public void testExperienceLossOnQuestFailure() {
         Quest quest = new Quest("Defeat the evil boss", "It's time to defeat your enemy, the evil boss.", 1);
@@ -124,7 +132,7 @@ public class QuestClassTest {
 
         quest.failQuest(testPlayer);  // Misslyckas med questet
 
-        // Kontrollera att spelaren har förlorat 20 erfarenhetspoäng vid misslyckande
+        // Kontrollera att spelaren har förlorat 20 exp vid failat quest
         assertEquals(30, testPlayer.getExperience());  // Player ska ha tappat 20 exp
     }
 

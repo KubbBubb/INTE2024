@@ -49,7 +49,7 @@ public class Quest {
             throw new IllegalArgumentException("Player cannot be null");
         }
 
-        // Tillåter bara att lämna in questet om det varken är misslyckat eller redan slutfört
+        // Tillåter bara att lämna in questet om det varken är misslyckat eller redan slutfört samt om playerns level är tillräcklig
         if (!isCompleted && !isFailed && player.getLevel() >= levelRequirement) {
             player.addExperience(rewardExperience);
             isCompleted = true;

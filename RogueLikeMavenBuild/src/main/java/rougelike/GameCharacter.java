@@ -12,7 +12,7 @@ public abstract class GameCharacter {
     private double magic;
     private Race race;
     private SpellBook spellBook;
-
+    private Armour armour;
     private Profession profession;
 
     public GameCharacter(String name, Race race) {
@@ -87,6 +87,22 @@ public abstract class GameCharacter {
             throw new IllegalStateException("Character has no profession.");
         }
         return this.profession;
+    }
+
+    public void setArmour(Armour armour) {
+        this.armour = armour;
+        this.health = health * armour.getHealthModifier();
+        this.strength = strength * armour.getStrengthModifier();
+        this.magic = magic * armour.getMagicModifier();
+        this.stamina = stamina * armour.getStaminaModifier();
+        this.speed = speed * armour.getSpeedModifier();
+    }
+
+    public Armour getArmour() {
+        if (this.armour == null) {
+            throw new IllegalStateException("Character has no armour.");
+        }
+        return this.armour;
     }
 }
 
