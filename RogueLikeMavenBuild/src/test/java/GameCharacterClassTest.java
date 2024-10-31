@@ -84,7 +84,7 @@ public class GameCharacterClassTest {
         assertEquals(0, initialPosition.getY(), "Initial Y position should be 3");
     }
     @Test
-    public void testSetPosition() {
+     public void testSetPosition() {
         Human human = new Human();
         Player player = new Player("TestPlayer", human,new Position(0,0));
         Position newPosition = new Position(5, 5);

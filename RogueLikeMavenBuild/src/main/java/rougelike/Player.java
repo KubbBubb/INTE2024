@@ -4,7 +4,7 @@ public class Player extends GameCharacter {
     private double experience;
     private int deathCounter;
 
-    public Player(String name, Race race,Position startPosition) {
+     public Player(String name, Race race,Position startPosition) {
         super(name, race,startPosition);
         this.deathCounter = 0;
     }
@@ -13,7 +13,7 @@ public class Player extends GameCharacter {
         return this.experience;
     }
 
-    public void addExperience(int amount) {
+     public void addExperience(int amount) {
         this.experience += amount;
 
         while (this.experience >= 100) {

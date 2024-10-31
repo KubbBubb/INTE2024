@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="72c91867-2532-4a28-88a8-bc8199696e74" name="Changes" comment="rörelse på kartan">
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/src/main/java/rougelike/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/RogueLikeMavenBuild/src/main/java/rougelike/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/src/main/java/rougelike/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/RogueLikeMavenBuild/src/main/java/rougelike/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/GameCharacterClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/GameCharacterClassTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/MapGeneratorTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/MapGeneratorTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/MapTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/MapTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/TerrainTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/TerrainTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\sawer\Downloads\scipro-develop\daisy-integration\INTE2024\RogueLikeMavenBuild\htmlReport" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="KubbBubb &lt;k.h.utkutug@protonmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Sawera18&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/KubbBubb/INTE2024.git&quot;,
+    &quot;accountId&quot;: &quot;2ee9e56f-eae7-4ee3-930e-52d82b99082d&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2o6nFdlFXzuDYnRQjkmVfF4unuC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.All in RogueLikeMavenBuild.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AngelTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CombatTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DwarfTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ElfTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameCharacterClassTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameCharacterClassTest.testGameCharacterFailedGetProfession.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameCharacterTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.GiantTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HumanTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MapGeneratorTests (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MapGeneratorTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MapGeneratorTests.testGenerateMapDimensions.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MapGeneratorTests.testGenerateMapTerrainDistribution.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MapGeneratorTests.testVisibilityInGeneratedMap.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MapTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MapTests.testCalculateVisibilityThroughObjects.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.NonPlayableCharacterClassTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlayerClassTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlayerClassTest.testGetPosition.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlayerClassTest.testInitialPosition.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlayerClassTest.testMoveOutOfBounds.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlayerClassTest.testMoveWithinBounds.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlayerWithRaceAndArmourModifierTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PositionTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PositionTests.testEquals.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PositionTests.testHashCode.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RaceClassTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RaceClassTest.testAccessTypes.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TerrainTests.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/sawer/Downloads/scipro-develop/daisy-integration/INTE2024/RogueLikeMavenBuild/src/main/java/rougelike&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="JUnit.MapGeneratorTests.testGenerateMapTerrainDistribution">
+    <configuration name="MapGeneratorTests.testGenerateMapTerrainDistribution" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RogueLikeMavenBuild" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MapGeneratorTests" />
+      <option name="METHOD_NAME" value="testGenerateMapTerrainDistribution" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerClassTest.testGetPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RogueLikeMavenBuild" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayerClassTest" />
+      <option name="METHOD_NAME" value="testGetPosition" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerClassTest.testInitialPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RogueLikeMavenBuild" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayerClassTest" />
+      <option name="METHOD_NAME" value="testInitialPosition" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerClassTest.testMoveOutOfBounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RogueLikeMavenBuild" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayerClassTest" />
+      <option name="METHOD_NAME" value="testMoveOutOfBounds" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerClassTest.testMoveWithinBounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RogueLikeMavenBuild" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayerClassTest" />
+      <option name="METHOD_NAME" value="testMoveWithinBounds" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MapGeneratorTests.testGenerateMapTerrainDistribution" />
+        <item itemvalue="JUnit.PlayerClassTest.testGetPosition" />
+        <item itemvalue="JUnit.PlayerClassTest.testInitialPosition" />
+        <item itemvalue="JUnit.PlayerClassTest.testMoveOutOfBounds" />
+        <item itemvalue="JUnit.PlayerClassTest.testMoveWithinBounds" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="72c91867-2532-4a28-88a8-bc8199696e74" name="Changes" comment="" />
+      <created>1730198790733</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730198790733</updated>
+      <workItem from="1730198794248" duration="2462000" />
+      <workItem from="1730218839325" duration="9558000" />
+      <workItem from="1730288606456" duration="4494000" />
+      <workItem from="1730298728306" duration="9415000" />
+      <workItem from="1730329130593" duration="135000" />
+      <workItem from="1730367808837" duration="24585000" />
+    </task>
+    <task id="LOCAL-00001" summary="ändrade package i tester">
+      <option name="closed" value="true" />
+      <created>1730299949185</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1730299949185</updated>
+    </task>
+    <task id="LOCAL-00002" summary="tog bort package i tester">
+      <option name="closed" value="true" />
+      <created>1730300008300</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730300008300</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ändrade tester o funktionalitet">
+      <option name="closed" value="true" />
+      <created>1730328704083</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730328704083</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ändrade race o terrain klasser samt uppdaterade tester">
+      <option name="closed" value="true" />
+      <created>1730373704030</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730373704030</updated>
+    </task>
+    <task id="LOCAL-00005" summary="rörelse på kartan">
+      <option name="closed" value="true" />
+      <created>1730396828427</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730396828427</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fullskalig fix inget överlevde" />
+    <MESSAGE value="ändrade package i tester" />
+    <MESSAGE value="tog bort package i tester" />
+    <MESSAGE value="ändrade tester o funktionalitet" />
+    <MESSAGE value="ändrade race o terrain klasser samt uppdaterade tester" />
+    <MESSAGE value="rörelse på kartan" />
+    <option name="LAST_COMMIT_MESSAGE" value="rörelse på kartan" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/NonPlayableCharacterClassTest.java</url>
+          <line>35</line>
+          <properties class="NonPlayableCharacterClassTest" method="testGetReply">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/INTE2024$TerrainTests.ic" NAME="TerrainTests Coverage Results" MODIFIED="1730378827792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/INTE2024$MapGeneratorTests.ic" NAME="MapGeneratorTests Coverage Results" MODIFIED="1730379091080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/INTE2024$GameCharacterTest.ic" NAME="GameCharacterTest Coverage Results" MODIFIED="1730379063816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/INTE2024$MapTests.ic" NAME="MapTests Coverage Results" MODIFIED="1730379031520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+  </component>
+</project>
