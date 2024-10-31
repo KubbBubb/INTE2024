@@ -5,9 +5,9 @@ import rougelike.races.Dwarf;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class QuestTest {
+public class QuestClassTest {
 
-    //skapar först testklasser - sedan skapar jag kod i klassen Quest som gör att koden kan köras.
+    //skapar först testklasser - sedan skapar jag kod i klassen Quest som gör att koden kan köras steg för steg.
 
     @Test
     public void testQuestStart() {
@@ -47,7 +47,7 @@ public class QuestTest {
         Quest quest2 = new Quest("Investigate the forest", "The forest is dark, you must investigate it.", 1);
 
         Player testPlayer = new Player("TestPlayer", new Dwarf());
-        ;
+
         testPlayer.addExperience(90);  // Player har 80 exp sedan innan
 
         quest1.completeQuest(testPlayer);
@@ -76,10 +76,10 @@ public class QuestTest {
 
         Quest quest = new Quest("Talk to the Shaman who can help you develop your skills further",
                 "The Shaman will only assist characters at level 5 or higher.", 5);
-        quest.setLevelRequirement(REQUIRED_LEVEL);  // Sätt nivåkrav
+        quest.setLevelRequirement(REQUIRED_LEVEL);  // Sätt levelkrav
 
         Player testPlayer = new Player("TestPlayer", new Dwarf());
-        testPlayer.setLevel(REQUIRED_LEVEL - 1);  // Sätt player level under kravet
+        testPlayer.setLevel(REQUIRED_LEVEL - 1);  // Sätt playerlevel under kravet
 
         quest.completeQuest(testPlayer);  // Ska ej kunna slutföra
 
@@ -97,6 +97,35 @@ public class QuestTest {
 
         quest.resetQuest();
         assertFalse(quest.isCompleted());
+    }
+
+    // Testar att ett quest markeras som misslyckat korrekt
+    @Test
+    public void testQuestFailureStatus() {
+        Quest quest = new Quest("Defeat the evil boss", "It's time to defeat your enemy, the evil boss.", 1);
+        Player testPlayer = new Player("TestPlayer", new Dwarf());
+
+        quest.failQuest(testPlayer);  // Failar questet
+
+        // Kontrollerar att questet är markerat som failed
+        assertTrue(quest.isFailed());
+        assertFalse(quest.isCompleted());
+
+        // Försöker slutföra ett misslyckat quest - ska inte gå
+        quest.completeQuest(testPlayer);
+        assertFalse(quest.isCompleted());
+    }
+
+    @Test
+    public void testExperienceLossOnQuestFailure() {
+        Quest quest = new Quest("Defeat the evil boss", "It's time to defeat your enemy, the evil boss.", 1);
+        Player testPlayer = new Player("TestPlayer", new Dwarf());
+        testPlayer.addExperience(50);  // Player startar med 50 exp
+
+        quest.failQuest(testPlayer);  // Misslyckas med questet
+
+        // Kontrollera att spelaren har förlorat 20 erfarenhetspoäng vid misslyckande
+        assertEquals(30, testPlayer.getExperience());  // Player ska ha tappat 20 exp
     }
 
 
