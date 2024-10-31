@@ -1,5 +1,6 @@
 
 import rougelike.Player;
+import rougelike.Position;
 import rougelike.races.Dwarf;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +12,7 @@ public class PlayerClassTest {
     @BeforeEach
     public void setUp() {
         Dwarf dwarf = new Dwarf();
-        player = new Player("TestPlayer", dwarf);
+        player = new Player("TestPlayer", dwarf,new Position(0,0));
     }
 
     @Test

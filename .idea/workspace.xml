@@ -7,14 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72c91867-2532-4a28-88a8-bc8199696e74" name="Changes" comment="rörelse på kartan">
-      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/src/main/java/rougelike/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/RogueLikeMavenBuild/src/main/java/rougelike/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/src/main/java/rougelike/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/RogueLikeMavenBuild/src/main/java/rougelike/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/GameCharacterClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/GameCharacterClassTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/MapGeneratorTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/MapGeneratorTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/MapTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/MapTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/TerrainTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/RogueLikeMavenBuild/src/test/java/TerrainTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="72c91867-2532-4a28-88a8-bc8199696e74" name="Changes" comment="rörelse på kartan" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +30,6 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -51,6 +43,11 @@
     &quot;accountId&quot;: &quot;2ee9e56f-eae7-4ee3-930e-52d82b99082d&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/tmp_5_GameCharacter.class" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/tmp_745_GameCharacter.class" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/tmp_8_GameCharacter.class" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -279,6 +276,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/INTE2024$PositionTests.ic" NAME="PositionTests Coverage Results" MODIFIED="1730407792423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/INTE2024$MapGeneratorTests_testGenerateMapTerrainDistribution.ic" NAME="MapGeneratorTests.testGenerateMapTerrainDistribution Coverage Results" MODIFIED="1730407718720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/INTE2024$TerrainTests.ic" NAME="TerrainTests Coverage Results" MODIFIED="1730378827792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/INTE2024$MapGeneratorTests.ic" NAME="MapGeneratorTests Coverage Results" MODIFIED="1730379091080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/INTE2024$GameCharacterTest.ic" NAME="GameCharacterTest Coverage Results" MODIFIED="1730379063816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
