@@ -2,9 +2,11 @@ package rougelike;
 
 public class Player extends GameCharacter {
     private double experience;
+    private int deathCounter;
 
     public Player(String name, Race race) {
         super(name, race);
+        this.deathCounter = 0;
     }
 
     public double getExperience() {
@@ -32,6 +34,7 @@ public class Player extends GameCharacter {
     public void death(){
         setLevel(1);
         setExperience(0);
+        deathCounter++;
     }
 
 }
