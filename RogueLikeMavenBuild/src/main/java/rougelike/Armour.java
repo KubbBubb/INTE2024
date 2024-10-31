@@ -1,7 +1,5 @@
 package rougelike;
 
-import java.util.Set;
-
 public abstract class Armour {
     private final double healthModifier;
     private final double staminaModifier;

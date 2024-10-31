@@ -1,14 +1,9 @@
 
 import org.junit.jupiter.api.Test;
-import rougelike.GameCharacter;
 import rougelike.NonPlayableCharacter;
 import rougelike.Player;
-import rougelike.armour.Chestplate;
-import rougelike.armour.Helmet;
-import rougelike.armour.Trinket;
 import rougelike.professions.Wizard;
 import rougelike.races.Angel;
-import rougelike.races.Dwarf;
 import rougelike.races.Human;
 
 
