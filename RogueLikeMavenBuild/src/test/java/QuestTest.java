@@ -11,7 +11,7 @@ public class QuestTest {
 
     @Test
     public void testQuestStart() {
-        Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.");
+        Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.", 1);
         assertEquals("Defeat the evil boss", quest.getName());
         assertEquals("It is time to defeat your enemy, the evil boss.", quest.getDescription());
         assertEquals(30, quest.getRewardExperience());  // Får 30 exp om man klarar questet
@@ -20,9 +20,10 @@ public class QuestTest {
 
     @Test
     public void testQuestCompletionGivesExperience() {
-        Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.");
+        Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.", 1);
         Player testPlayer = new Player("TestPlayer", new Dwarf());
-        ;  // Skapa en Player för att se om den får exp vid avslutat quest
+
+        // Skapa en Player för att se om den får exp vid avslutat quest
         quest.completeQuest(testPlayer);  // Koppla completeQuest till Player
         assertTrue(quest.isCompleted());
         assertEquals(30, testPlayer.getExperience());  // Spelaren ska få 30 exp
@@ -30,7 +31,7 @@ public class QuestTest {
 
     @Test
     public void testQuestLevelUpOnCompletion() {
-        Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.");
+        Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.", 1);
         Player testPlayer = new Player("TestPlayer", new Dwarf());
         testPlayer.addExperience(80);  // Player har 80 exp sedan innan
 
@@ -42,8 +43,8 @@ public class QuestTest {
 
     @Test
     public void testMultipleQuestsLevelUp() {
-        Quest quest1 = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.");
-        Quest quest2 = new Quest("Investigate the forest", "The forest is dark, you must investigate it.");
+        Quest quest1 = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.",1);
+        Quest quest2 = new Quest("Investigate the forest", "The forest is dark, you must investigate it.", 1);
 
         Player testPlayer = new Player("TestPlayer", new Dwarf());
         ;
@@ -59,7 +60,7 @@ public class QuestTest {
 
     @Test
     public void testSameQuestCannotBeCompletedTwice() {
-        Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.");
+        Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.", 1);
         Player testPlayer = new Player("TestPlayer", new Dwarf());
 
         quest.completeQuest(testPlayer);  // Första avslutet av questet
@@ -67,6 +68,35 @@ public class QuestTest {
 
         assertTrue(quest.isCompleted());
         assertEquals(30, testPlayer.getExperience());
+    }
+
+    @Test
+    public void testQuestCompletionWithLevelRequirement() {
+        final int REQUIRED_LEVEL = 5;
+
+        Quest quest = new Quest("Talk to the Shaman who can help you develop your skills further",
+                "The Shaman will only assist characters at level 5 or higher.", 5);
+        quest.setLevelRequirement(REQUIRED_LEVEL);  // Sätt nivåkrav
+
+        Player testPlayer = new Player("TestPlayer", new Dwarf());
+        testPlayer.setLevel(REQUIRED_LEVEL - 1);  // Sätt player level under kravet
+
+        quest.completeQuest(testPlayer);  // Ska ej kunna slutföra
+
+        assertFalse(quest.isCompleted());
+        assertEquals(0, testPlayer.getExperience());  // Ingen exp ska ges om questet ej kan slutföras
+    }
+
+    @Test
+    public void testResetQuest() {
+        Quest quest = new Quest("Defeat the evil boss", "It's time to defeat your enemy, the evil boss.", 1);
+        Player testPlayer = new Player("TestPlayer", new Dwarf());
+
+        quest.completeQuest(testPlayer);
+        assertTrue(quest.isCompleted());
+
+        quest.resetQuest();
+        assertFalse(quest.isCompleted());
     }
 
 
