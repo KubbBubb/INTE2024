@@ -11,6 +11,10 @@ public class Initiative {
 
         if (pcSpeed > npcSpeed){
             return pc;
+        } else if (pcSpeed == npcSpeed) {
+            if(Math.random() % 2 == 0){
+                return pc;
+            }
         }
         return npc;
 

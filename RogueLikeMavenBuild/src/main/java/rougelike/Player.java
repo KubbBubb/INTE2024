@@ -24,9 +24,16 @@ public class Player extends GameCharacter {
         this.setLevel(this.getLevel() + 1);
     }
 
-    public void setLevel(int newLevel) {
-        super.level = newLevel;
+
+    public void setExperience(int experience){
+        this.experience = experience;
     }
+
+    public void death(){
+        setLevel(1);
+        setExperience(0);
+    }
+
 }
 
 

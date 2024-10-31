@@ -1,5 +1,6 @@
+
 import rougelike.Player;
-import rougelike.races.Human;
+import rougelike.races.Dwarf;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,8 +10,8 @@ public class PlayerClassTest {
 
     @BeforeEach
     public void setUp() {
-        Human human = new Human();
-        player = new Player("TestPlayer", human);
+        Dwarf dwarf = new Dwarf();
+        player = new Player("TestPlayer", dwarf);
     }
 
     @Test
@@ -52,5 +53,12 @@ public class PlayerClassTest {
     @Test
     public void testInitialLevel() {
         assertEquals(1, player.getLevel(), "Initial level should be 1");
+    }
+
+    @Test
+    public void testMaxLevel() {
+        // Försöker ge experience som tar spelaren över max level 10
+        player.addExperience(1000);
+        assertEquals(10, player.getLevel(), "rougelike.Player level should not exceed max level of 10");
     }
 }

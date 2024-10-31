@@ -1,10 +1,9 @@
 package rougelike;
 
-public class GameCharacter {
+public abstract class GameCharacter {
 
     private String name;
-    public int level;
-
+    private int level;
     private double strength;
     private double speed;
     private double experience;
@@ -12,6 +11,7 @@ public class GameCharacter {
     private double stamina;
     private double magic;
     private Race race;
+    private SpellBook spellBook;
 
     private Profession profession;
 
@@ -62,6 +62,10 @@ public class GameCharacter {
     public double getStamina() {
         return stamina;
     }
+    public void setLevel(int newLevel) {
+        this.level = newLevel;
+    }
+
 
     protected void levelUp() {
         this.level++;
