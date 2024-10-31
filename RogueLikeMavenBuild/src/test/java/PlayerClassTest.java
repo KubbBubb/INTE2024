@@ -47,7 +47,7 @@ public class PlayerClassTest {
 
     @Test
     public void testInitialHealth() {
-        assertEquals(150, player.getHealth(), "Initial health should be 100");
+        assertEquals(150, player.getHealth(), "Initial health should be 150 for a Dwarf");
     }
 
     @Test
