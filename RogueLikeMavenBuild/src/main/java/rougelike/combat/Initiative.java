@@ -2,21 +2,24 @@ package rougelike.combat;
 
 import rougelike.GameCharacter;
 
+import java.util.ArrayList;
+
 public class Initiative {
 
-    public static GameCharacter initativeOrder(GameCharacter pc, GameCharacter npc){
+    public static ArrayList<GameCharacter> initiativeOrder(GameCharacter pc, GameCharacter npc){
 
+        ArrayList<GameCharacter> orderList = new ArrayList<>();
         double pcSpeed = pc.getSpeed();
         double npcSpeed = npc.getSpeed();
 
-        if (pcSpeed > npcSpeed){
-            return pc;
-        } else if (pcSpeed == npcSpeed) {
-            if(Math.random() % 2 == 0){
-                return pc;
-            }
+        if (pcSpeed > npcSpeed) {
+            orderList.add(pc);
+            orderList.add(npc);
+        }else{
+            orderList.add(npc);
+            orderList.add(pc);
         }
-        return npc;
+        return orderList;
 
     }
 
