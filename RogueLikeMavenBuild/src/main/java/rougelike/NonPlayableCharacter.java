@@ -16,6 +16,10 @@ public class NonPlayableCharacter extends GameCharacter {
         addDialogue("What is your level?", "I am level " + getLevel() + ".");
     }
 
+    public HashMap<String, String> getDialogues() {
+        return dialogues;
+    }
+
     public void addDialogue(String prompt, String reply) {
         dialogues.put(prompt, reply);
     }
