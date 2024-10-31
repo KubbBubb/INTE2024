@@ -38,10 +38,9 @@ public class RaceClassTest {
         assertEquals(testAngel.getMagicModifier(), 2);
     }
     @Test
-    public void testAccessTypes() {
+    public void testCharacterType() {
         Race Angel = new Angel();
         assertTrue(Angel.getCharacterType().containsAll(Set.of("walk", "fly")), "Angel should be able to walk and fly");
-
         Race testHuman = new Human();
         assertTrue(testHuman.getCharacterType().containsAll(Set.of("walk", "swim")), "Human should be able to to walk and swim");
     }
