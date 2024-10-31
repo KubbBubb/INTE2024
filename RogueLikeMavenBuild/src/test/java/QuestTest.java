@@ -47,7 +47,7 @@ public class QuestTest {
         Quest quest2 = new Quest("Investigate the forest", "The forest is dark, you must investigate it.", 1);
 
         Player testPlayer = new Player("TestPlayer", new Dwarf());
-        ;
+
         testPlayer.addExperience(90);  // Player har 80 exp sedan innan
 
         quest1.completeQuest(testPlayer);
