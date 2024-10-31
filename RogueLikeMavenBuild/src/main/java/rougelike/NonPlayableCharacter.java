@@ -1,9 +1,10 @@
 package rougelike;
 
-import java.util.HashMap;
+import java.util.*;
 
 public class NonPlayableCharacter extends GameCharacter {
     private final HashMap<String, String> dialogues;
+    private final HashMap<String, List<String>> randomDialogues = new HashMap<>();
 
     public NonPlayableCharacter(String name, Race race) {
         super(name, race);
@@ -16,6 +17,13 @@ public class NonPlayableCharacter extends GameCharacter {
         addDialogue("What is your level?", "I am level " + getLevel() + ".");
     }
 
+    private String getHealthResponse() {
+        if (getHealth() > 50) {
+            return "I feel strong and healthy!";
+        }
+        return "I feel a bit weak...";
+    }
+
     public HashMap<String, String> getDialogues() {
         return dialogues;
     }
@@ -25,6 +33,19 @@ public class NonPlayableCharacter extends GameCharacter {
     }
 
     public String getReply(String prompt) {
+        if (prompt.equals("How are you feeling?")) {
+            return getHealthResponse();
+        }
         return dialogues.getOrDefault(prompt, "I don't quite understand...");
+    }
+
+    public void addRandomDialogue(String prompt, String... replies) {
+        randomDialogues.putIfAbsent(prompt, new ArrayList<>());
+        randomDialogues.get(prompt).addAll(Arrays.asList(replies));
+    }
+
+    public String getRandomReply(String prompt) {
+        List<String> replies = randomDialogues.get(prompt);
+        return (replies != null && !replies.isEmpty()) ? replies.get(new Random().nextInt(replies.size())) : "I don't really understand...";
     }
 }
