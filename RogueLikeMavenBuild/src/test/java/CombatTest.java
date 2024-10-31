@@ -1,8 +1,5 @@
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import rougelike.GameCharacter;
 import rougelike.NonPlayableCharacter;
 import rougelike.Player;
 import rougelike.races.Dwarf;
@@ -12,7 +9,7 @@ import rougelike.races.Human;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static rougelike.combat.Action.hit;
-import static rougelike.combat.Initiative.initativeOrder;
+import static rougelike.combat.Initiative.initiativeOrder;
 
 
 public class CombatTest {
@@ -43,7 +40,7 @@ public class CombatTest {
         var pc = new Player("test pc", elf);
         var npc = new NonPlayableCharacter("test npc", human);
 
-        assertEquals(pc, initativeOrder(pc, npc));
+        assertEquals(pc, initiativeOrder(pc, npc));
 
     }
 
@@ -57,7 +54,7 @@ public class CombatTest {
         var pc = new Player("test pc", dwarf);
         var npc = new NonPlayableCharacter("test npc", human);
 
-        assertEquals(npc, initativeOrder(pc, npc));
+        assertEquals(npc, initiativeOrder(pc, npc));
 
     }
 
@@ -71,9 +68,31 @@ public class CombatTest {
         var pc = new Player("test pc", humanTwo);
         var npc = new NonPlayableCharacter("test npc", human);
 
-        assertEquals(npc, initativeOrder(pc, npc));
+        assertEquals(npc, initiativeOrder(pc, npc));
 
     }
+
+    @Test
+    @DisplayName("Testar att PC dör")
+    void testPcDeath(){
+
+        var human = new Human();
+        var giant = new Giant();
+
+        var pc = new Player("test pc", human);
+        var npc = new NonPlayableCharacter("test unga bunga", giant);
+
+        pc.setHealth(10);
+        pc.setLevel(2);
+        pc.setExperience(100);
+        hit(npc, pc);
+
+        assertEquals(-10, pc.getHealth());
+        assertEquals(1, pc.getLevel());
+        assertEquals(0, pc.getExperience());
+
+    }
+
 
 
 

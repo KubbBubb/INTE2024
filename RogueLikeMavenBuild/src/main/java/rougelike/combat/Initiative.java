@@ -4,7 +4,7 @@ import rougelike.GameCharacter;
 
 public class Initiative {
 
-    public static GameCharacter initativeOrder(GameCharacter pc, GameCharacter npc){
+    public static GameCharacter initiativeOrder(GameCharacter pc, GameCharacter npc){
 
         double pcSpeed = pc.getSpeed();
         double npcSpeed = npc.getSpeed();
