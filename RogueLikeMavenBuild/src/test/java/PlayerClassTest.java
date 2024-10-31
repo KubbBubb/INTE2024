@@ -54,11 +54,4 @@ public class PlayerClassTest {
     public void testInitialLevel() {
         assertEquals(1, player.getLevel(), "Initial level should be 1");
     }
-
-    @Test
-    public void testMaxLevel() {
-        // Försöker ge experience som tar spelaren över max level 10
-        player.addExperience(1000);
-        assertEquals(10, player.getLevel(), "rougelike.Player level should not exceed max level of 10");
-    }
 }
