@@ -3,7 +3,7 @@ package rougelike;
 import java.util.HashMap;
 
 public class NonPlayableCharacter extends GameCharacter {
-    private HashMap<String, String> dialogues;
+    private final HashMap<String, String> dialogues;
 
     public NonPlayableCharacter(String name, Race race) {
         super(name, race);

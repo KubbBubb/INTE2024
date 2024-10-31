@@ -10,7 +10,10 @@ public class GameCharacter {
     private double experience;
     private double health;
     private double stamina;
+    private double magic;
     private Race race;
+
+    private Profession profession;
 
     public GameCharacter(String name, Race race) {
         this.race =  race;
@@ -20,7 +23,8 @@ public class GameCharacter {
         this.health = 100 * race.getHealthModifier();
         this.strength = 10 * race.getStrengthModifier();
         this.speed = 10 * race.getSpeedModifier();
-        this.stamina = 100;
+        this.stamina = 100 * race.getStaminaModifier();
+        this.magic = 10 * race.getMagicModifier();
     }
 
     public String getName() {
@@ -63,7 +67,18 @@ public class GameCharacter {
         this.level++;
     }
 
+    private void setProfession(Profession profession) {
+        this.profession = profession;
+        this.health = health * profession.getHealthModifier();
+        this.strength = strength * profession.getStrengthModifier();
+        this.magic = magic * profession.getMagicModifier();
+    }
 
-
+    public Profession getProfession() {
+        if (this.profession == null) {
+            throw new IllegalStateException("Character has no profession.");
+        }
+        return this.profession;
+    }
 }
 

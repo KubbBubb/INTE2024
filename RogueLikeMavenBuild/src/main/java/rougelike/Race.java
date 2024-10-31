@@ -9,6 +9,7 @@ public abstract class Race {
     private final double strengthModifier;
     private final double magicModifier;
     private final Set<String> characterType;
+
     public Race(double healthModifier, double staminaModifier, double speedModifier, double strengthModifier, double magicModifier,Set<String> characterType) {
         this.healthModifier = healthModifier;
         this.staminaModifier = staminaModifier;
@@ -37,6 +38,7 @@ public abstract class Race {
     public double getMagicModifier() {
         return magicModifier;
     }
+
     public Set<String> getCharacterType() {
         return characterType;
     }
