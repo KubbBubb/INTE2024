@@ -1,8 +1,8 @@
 package rougelike;
 
 public class Quest {
-    private String name;
-    private String description;
+    private final String name;
+    private final String description;
     private final int rewardExperience = 30;  // Fast belöning på 30 exp per quest
     private boolean isCompleted;
     private int levelRequirement = 1;
