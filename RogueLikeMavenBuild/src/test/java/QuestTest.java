@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class QuestTest {
 
-    //skapar först testklasser - sedan skapar jag kod i klassen Quest som gör att koden kan köras.
+    //skapar först testklasser - sedan skapar jag kod i klassen Quest som gör att koden kan köras steg för steg.
 
     @Test
     public void testQuestStart() {
@@ -76,10 +76,10 @@ public class QuestTest {
 
         Quest quest = new Quest("Talk to the Shaman who can help you develop your skills further",
                 "The Shaman will only assist characters at level 5 or higher.", 5);
-        quest.setLevelRequirement(REQUIRED_LEVEL);  // Sätt nivåkrav
+        quest.setLevelRequirement(REQUIRED_LEVEL);  // Sätt levelkrav
 
         Player testPlayer = new Player("TestPlayer", new Dwarf());
-        testPlayer.setLevel(REQUIRED_LEVEL - 1);  // Sätt player level under kravet
+        testPlayer.setLevel(REQUIRED_LEVEL - 1);  // Sätt playerlevel under kravet
 
         quest.completeQuest(testPlayer);  // Ska ej kunna slutföra
 
@@ -97,6 +97,25 @@ public class QuestTest {
 
         quest.resetQuest();
         assertFalse(quest.isCompleted());
+    }
+
+    @Test
+    public void testQuestFailureWithExperienceLoss() {
+        Quest quest = new Quest("Retrieve the ancient relic", "The relic has been lost in a dangerous dungeon.", 1);
+        Player testPlayer = new Player("TestPlayer", new Dwarf());
+        testPlayer.addExperience(50);  // Player startar med 50 exp
+
+        quest.failQuest(testPlayer);  // Player failar quest
+
+        // Kontrollerar att player failat questet och att player då förlorar exp
+        assertTrue(quest.isFailed());
+        assertEquals(30, testPlayer.getExperience());  // playern ska förlora 20 exp
+        assertFalse(quest.isCompleted());
+
+        // Det ska inte gå att lämna in ett quest som failat
+        quest.completeQuest(testPlayer);
+        assertFalse(quest.isCompleted());
+        assertEquals(30, testPlayer.getExperience());  // Ingen exp ska läggas till
     }
 
 
