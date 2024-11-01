@@ -22,6 +22,7 @@ public abstract class Profession {
     public double getMagicModifier() {
         return magicModifier;
     }
+
 }
 
 /*
