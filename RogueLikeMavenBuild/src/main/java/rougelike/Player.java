@@ -30,10 +30,20 @@ public class Player extends GameCharacter {
         this.experience = experience;
     }
 
+    @Override
+    public void setHealth(double health) {
+         super.setHealth(health);
+
+         if (health <= 0) {
+             death();
+         }
+    }
+
     public void death(){
-        setLevel(1);
-        setExperience(0);
-        deathCounter++;
+         super.setHealth(100 * getRace().getHealthModifier());
+         setLevel(1);
+         setExperience(0);
+         deathCounter++;
     }
     public boolean move(Map map, String direction) {
         Position newPosition = getPosition().move(direction);
