@@ -74,22 +74,37 @@ public class CombatTest {
     }
 
     @Test
-    @DisplayName("Testar att PC dör")
+    @DisplayName("Testar att PCs död räknas")
+    void testPcDeathCounter(){
+
+        var human = new Human();
+        var giant = new Giant();
+
+        var pc = new PlayableCharacter("test pc", human);
+
+        pc.playerDeathReset();
+
+        assertEquals(1, pc.getDeathCounter());
+
+
+    }
+
+    @Test
+    @DisplayName("Testar att PCs död återställer lvl och exp")
     void testPcDeath(){
 
         var human = new Human();
         var giant = new Giant();
 
         var pc = new PlayableCharacter("test pc", human);
-        var npc = new NonPlayableCharacter("test unga bunga", giant,new Position(0,0));
+        var npc = new NonPlayableCharacter("test unga bunga", giant, new Position(0,0));
 
         pc.setHealth(10);
         pc.setLevel(2);
         pc.setExperience(100);
-        hit(npc, pc);
+        fight(pc, npc);
 
-        // Testar att hpn av spelaren återställs till sitt vanliga värde om den skulle dö
-        assertEquals(100, pc.getHealth());
+
 
         // Testar att leveln av spelaren återställs till 1 om hp mindre än 0
         assertEquals(1, pc.getLevel());
@@ -100,14 +115,28 @@ public class CombatTest {
     }
 
     @Test
-    @DisplayName("Testar en enkel fight")
-    void testFight(){
+    @DisplayName("Testar en enkel fight där PC är starkare")
+    void testFightPcStrong(){
 
         var human = new Human();
         var giant = new Giant();
 
         var pc = new PlayableCharacter("pc", giant);
         var npc = new NonPlayableCharacter("npc", human,new Position(0,0));
+
+        fight(pc, npc);
+
+    }
+
+    @Test
+    @DisplayName("Testar en enkel fight där NPC är starkare")
+    void testFightNpcStrong(){
+
+        var human = new Human();
+        var giant = new Giant();
+
+        var pc = new PlayableCharacter("pc", human);
+        var npc = new NonPlayableCharacter("npc", giant, new Position(0,0));
 
         fight(pc, npc);
 

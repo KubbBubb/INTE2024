@@ -34,24 +34,27 @@ public class Combat {
             System.out.println(second.getName() + " strikes " + first.getName() + ". " + first.getName() + " has "
                     + first.getHealth() + " hp left");
 
-            if(pc.getHealth() == 0.0){
+            if(npc.getHealth() <= 0.0 ){
+                System.out.println("You Won!");
+            }else if (pc.getHealth() <= 0.0){
                 pc.playerDeathReset();
                 System.out.println("You died");
-            }else if (npc.getHealth() == 0.0){
-                System.out.println("You Won!");
+                System.out.println(pc.getDeathCounter());
+
             }
 
 
         }
     }
 
+
     public static void main(String[] args) {
 
         var human = new Human();
         var giant = new Giant();
 
-        var pc = new PlayableCharacter("pc", giant);
-        var npc = new NonPlayableCharacter("npc", human,new Position(2,2));
+        var pc = new PlayableCharacter("pc", human);
+        var npc = new NonPlayableCharacter("npc", giant,new Position(2,2));
         pc.setPosition(0,0);
 
         fight(pc, npc);

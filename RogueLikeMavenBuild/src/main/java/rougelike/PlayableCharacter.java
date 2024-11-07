@@ -64,7 +64,7 @@ public class PlayableCharacter extends GameCharacter {
         Metod för spelardöd, som ställer om alla stats till level 1
          */
 
-        super.setHealth(100 * getRace().getHealthModifier());
+
         setLevel(1);
         setExperience(0);
         deathCounter++;
