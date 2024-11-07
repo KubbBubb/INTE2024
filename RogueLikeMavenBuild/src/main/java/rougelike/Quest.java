@@ -62,7 +62,12 @@ public class Quest {
         }
 
         if (!isCompleted && !isFailed) {
-            player.addExperience(-20);  // Player tappar 20 exp
+            double newExperience = player.getExperience() - 20;
+            // Se till att exp inte blir negativ
+            if (newExperience < 0) {
+                newExperience = 0;
+            }
+            player.setExperience(newExperience); // Uppdatera exp
             isFailed = true;
         }
     }

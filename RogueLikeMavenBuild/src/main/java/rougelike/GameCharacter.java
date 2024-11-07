@@ -19,7 +19,6 @@ public abstract class GameCharacter {
     private double magic;
     private final Race race;
     private SpellBook spellBook;
-    private Armour armour;
     private Profession profession;
     private Position position;
 
@@ -139,7 +138,6 @@ public abstract class GameCharacter {
         if (armour == null) {
             throw new IllegalArgumentException("Armour cannot be null.");
         }
-        this.armour = armour;
         this.health = health * armour.getHealthModifier();
         this.strength = strength * armour.getStrengthModifier();
         this.magic = magic * armour.getMagicModifier();
