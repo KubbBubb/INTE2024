@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-import rougelike.Player;
+import rougelike.PlayableCharacter;
 import rougelike.Position;
 import rougelike.Quest;
 import rougelike.races.Dwarf;
@@ -24,7 +24,7 @@ public class QuestClassTest {
     @Test
     public void testQuestCompletionGivesExperience() {
         Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.", 1);
-        Player testPlayer = new Player("TestPlayer", new Dwarf(),new Position(0,0));
+        PlayableCharacter testPlayer = new PlayableCharacter("TestPlayer", new Dwarf(),new Position(0,0));
 
         // Skapa en Player för att se om den får exp vid avslutat quest
         quest.completeQuest(testPlayer);  // Koppla completeQuest till Player
@@ -36,7 +36,7 @@ public class QuestClassTest {
     @Test
     public void testQuestLevelUpOnCompletion() {
         Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.", 1);
-        Player testPlayer = new Player("TestPlayer", new Dwarf(),new Position(0,0));
+        PlayableCharacter testPlayer = new PlayableCharacter("TestPlayer", new Dwarf(),new Position(0,0));
         testPlayer.addExperience(80);  // Player har 80 exp sedan innan
 
         quest.completeQuest(testPlayer);
@@ -51,7 +51,7 @@ public class QuestClassTest {
         Quest quest1 = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.",1);
         Quest quest2 = new Quest("Investigate the forest", "The forest is dark, you must investigate it.", 1);
 
-        Player testPlayer = new Player("TestPlayer", new Dwarf(),new Position(0,0));
+        PlayableCharacter testPlayer = new PlayableCharacter("TestPlayer", new Dwarf(),new Position(0,0));
 
         testPlayer.addExperience(90);  // Player har 80 exp sedan innan
 
@@ -67,7 +67,7 @@ public class QuestClassTest {
     @Test
     public void testSameQuestCannotBeCompletedTwice() {
         Quest quest = new Quest("Defeat the evil boss", "It is time to defeat your enemy, the evil boss.", 1);
-        Player testPlayer = new Player("TestPlayer", new Dwarf(),new Position(0,0));
+        PlayableCharacter testPlayer = new PlayableCharacter("TestPlayer", new Dwarf(),new Position(0,0));
 
         quest.completeQuest(testPlayer);  // Första avslutet av questet
         quest.completeQuest(testPlayer);  // Andra avslutet av questet (ska inte ge mer experience)
@@ -85,7 +85,7 @@ public class QuestClassTest {
                 "The Shaman will only assist characters at level 5 or higher.", 5);
         quest.setLevelRequirement(REQUIRED_LEVEL);  // Sätt levelkrav
 
-        Player testPlayer = new Player("TestPlayer", new Dwarf(),new Position(0,0));
+        PlayableCharacter testPlayer = new PlayableCharacter("TestPlayer", new Dwarf(),new Position(0,0));
         testPlayer.setLevel(REQUIRED_LEVEL - 1);  // Sätt playerlevel under kravet
 
         quest.completeQuest(testPlayer);  // Ska ej kunna slutföra
@@ -98,7 +98,7 @@ public class QuestClassTest {
     @Test
     public void testResetQuest() {
         Quest quest = new Quest("Defeat the evil boss", "It's time to defeat your enemy, the evil boss.", 1);
-        Player testPlayer = new Player("TestPlayer", new Dwarf(),new Position(0,0));
+        PlayableCharacter testPlayer = new PlayableCharacter("TestPlayer", new Dwarf(),new Position(0,0));
 
         quest.completeQuest(testPlayer);
         assertTrue(quest.isCompleted());
@@ -111,7 +111,7 @@ public class QuestClassTest {
     @Test
     public void testQuestFailureStatus() {
         Quest quest = new Quest("Defeat the evil boss", "It's time to defeat your enemy, the evil boss.", 1);
-        Player testPlayer = new Player("TestPlayer", new Dwarf(),new Position(0,0));
+        PlayableCharacter testPlayer = new PlayableCharacter("TestPlayer", new Dwarf(),new Position(0,0));
 
         quest.failQuest(testPlayer);  // Failar questet
 
@@ -128,7 +128,7 @@ public class QuestClassTest {
     @Test
     public void testExperienceLossOnQuestFailure() {
         Quest quest = new Quest("Defeat the evil boss", "It's time to defeat your enemy, the evil boss.", 1);
-        Player testPlayer = new Player("TestPlayer", new Dwarf(),new Position(0,0));
+        PlayableCharacter testPlayer = new PlayableCharacter("TestPlayer", new Dwarf(),new Position(0,0));
         testPlayer.addExperience(50);  // Player startar med 50 exp
 
         quest.failQuest(testPlayer);  // Misslyckas med questet

@@ -44,7 +44,7 @@ public class Quest {
         this.levelRequirement = levelRequirement;
     }
 
-    public void completeQuest(Player player) {
+    public void completeQuest(PlayableCharacter player) {
         if (player == null) {
             throw new IllegalArgumentException("Player cannot be null");
         }
@@ -56,7 +56,7 @@ public class Quest {
         }
     }
 
-    public void failQuest(Player player) {
+    public void failQuest(PlayableCharacter player) {
         if (player == null) {
             throw new IllegalArgumentException("Player cannot be null");
         }

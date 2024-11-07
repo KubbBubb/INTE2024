@@ -1,5 +1,5 @@
 import rougelike.Map;
-import rougelike.Player;
+import rougelike.PlayableCharacter;
 import rougelike.Position;
 import rougelike.Terrain;
 import rougelike.races.Dwarf;
@@ -8,13 +8,13 @@ import org.junit.jupiter.api.Test;
 import rougelike.races.Human;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PlayerClassTest {
-    private Player player;
+public class PlayableCharacterClassTest {
+    private PlayableCharacter player;
 
     @BeforeEach
     public void setUp() {
         Dwarf dwarf = new Dwarf();
-        player = new Player("TestPlayer", dwarf,new Position(0,0));
+        player = new PlayableCharacter("TestPlayer", dwarf,new Position(0,0));
     }
 
     @Test
@@ -60,7 +60,7 @@ public class PlayerClassTest {
      @Test
     public void testPlayerMovesUpWithinBounds() {
         Map map = new Map(5, 5);
-        Player player = new Player("Player", new Human(), new Position(2, 2));
+        PlayableCharacter player = new PlayableCharacter("Player", new Human(), new Position(2, 2));
         boolean moveCharacter = player.move(map, "up");
         assertTrue(moveCharacter, "Player should be able to move up within bounds");
         assertEquals(new Position(2, 1), player.getPosition(), "Position should be updated to (2,1)");
@@ -69,7 +69,7 @@ public class PlayerClassTest {
     @Test
     public void testPlayerMovesRightWithinBounds() {
         Map map = new Map(5, 5);
-        Player player = new Player("Player", new Human(), new Position(2, 2));
+        PlayableCharacter player = new PlayableCharacter("Player", new Human(), new Position(2, 2));
         boolean moveCharacter  = player.move(map, "right");
         assertTrue(moveCharacter, "Player should be able to move right within map bounds");
         assertEquals(new Position(3, 2), player.getPosition(), "Position should be updated to (3,2)");
@@ -77,7 +77,7 @@ public class PlayerClassTest {
     @Test
     public void testPlayerMovesLeftWithinBounds() {
         Map map = new Map(5, 5);
-        Player player = new Player("Player", new Human(), new Position(2, 2));
+        PlayableCharacter player = new PlayableCharacter("Player", new Human(), new Position(2, 2));
         boolean moveCharacter  = player.move(map, "left");
         assertTrue(moveCharacter, "Player should be able to move right within map bounds");
         assertEquals(new Position(1, 2), player.getPosition(), "Position should be updated to (3,2)");
@@ -85,7 +85,7 @@ public class PlayerClassTest {
     @Test
     public void testPlayerMovesDownWithinBounds() {
         Map map = new Map(5, 5);
-        Player player = new Player("Player", new Human(), new Position(2, 2));
+        PlayableCharacter player = new PlayableCharacter("Player", new Human(), new Position(2, 2));
         boolean moveCharacter  = player.move(map, "down");
         assertTrue(moveCharacter, "Player should be able to move right within map bounds");
         assertEquals(new Position(2, 3), player.getPosition(), "Position should be updated to (3,2)");
@@ -94,7 +94,7 @@ public class PlayerClassTest {
     @Test
     public void testPlayerCannotMoveOutOfBounds() {
         Map map = new Map(5, 5);
-        Player player = new Player("Player", new Human(), new Position(2, 2));
+        PlayableCharacter player = new PlayableCharacter("Player", new Human(), new Position(2, 2));
         boolean moveCharacter  = player.move(map, "left");
         assertTrue(moveCharacter, "Player should not be able to move out of map bounds");
 
@@ -103,7 +103,7 @@ public class PlayerClassTest {
     public void testPlayerCannotMoveOnToInaccessibleTerrain() {
         Map map = new Map(5, 5);
         map.setTerrain(2, 1, new Terrain("Water", 0, true, "swim"));
-        Player player = new Player("Player", new Dwarf(), new Position(2, 2));
+        PlayableCharacter player = new PlayableCharacter("Player", new Dwarf(), new Position(2, 2));
         boolean moveCharacter  = player.move(map, "up");
         assertFalse(moveCharacter, "Player should be blocked from moving onto inaccessible terrain");
         assertEquals(new Position(2, 2), player.getPosition(), "Player should remain in the original position after blocked move");
