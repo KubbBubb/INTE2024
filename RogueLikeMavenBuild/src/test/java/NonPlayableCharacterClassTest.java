@@ -106,7 +106,7 @@ public class NonPlayableCharacterClassTest {
 
     @Test
     public void testGetRandomReplyWithNoReplies() {
-        assertEquals("I don't really understand...", npc.getRandomReply("Unknown"));
+        assertEquals("I don't quite understand...", npc.getRandomReply("Unknown"));
     }
     @Test
     public void testInitialPosition() {
