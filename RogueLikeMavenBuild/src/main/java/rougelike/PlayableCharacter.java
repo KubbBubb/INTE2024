@@ -17,9 +17,12 @@ public class PlayableCharacter extends GameCharacter {
         double currentExperience = getExperience();
         currentExperience += amount; // Lägg till erfarenhet
 
-        // Använder nu if-sats istället för den tidigare while-loopen
-        if (currentExperience >= 100.0) {
-            currentExperience -= 100.0;
+        // Beräkna hur många levels att gå upp
+        int levelsToGain = (int) (currentExperience / 100);
+        currentExperience %= 100; // Behåll endast excess exp under 100
+
+        // Öka levels
+        for (int i = 0; i < levelsToGain; i++) {
             levelUpOnce();
         }
 
