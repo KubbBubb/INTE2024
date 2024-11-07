@@ -17,7 +17,7 @@ public abstract class GameCharacter {
     private Position position;
 
 
-    public GameCharacter(String name, Race race,Position position) {
+    public GameCharacter(String name, Race race) {
         this.race =  race;
         this.name = name;
         this.experience = 0;

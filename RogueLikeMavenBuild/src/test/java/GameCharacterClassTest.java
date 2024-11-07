@@ -32,7 +32,8 @@ public class GameCharacterClassTest {
 
     @Test
     public void testGetRace() {
-        PlayableCharacter testPlayer = new PlayableCharacter("TestAngel", new Angel(),new Position(2,2));
+        PlayableCharacter testPlayer = new PlayableCharacter("TestAngel", new Angel());
+        testPlayer.setPosition(2,2);
         assertInstanceOf(Angel.class, testPlayer.getRace(), "Race should be Angel");
     }
 
@@ -77,7 +78,8 @@ public class GameCharacterClassTest {
     @Test
     public void testInitialPosition() {
         Human human = new Human();
-       PlayableCharacter player = new PlayableCharacter("TestPlayer", human,new Position(0,0));
+       PlayableCharacter player = new PlayableCharacter("TestPlayer", human);
+        player.setPosition(2,2);
         Position initialPosition = player.getPosition();
         assertEquals(0, initialPosition.getX(), "Initial X position should be 2");
         assertEquals(0, initialPosition.getY(), "Initial Y position should be 3");
@@ -85,7 +87,7 @@ public class GameCharacterClassTest {
     @Test
      public void testSetPosition() {
         Human human = new Human();
-        PlayableCharacter player = new PlayableCharacter("TestPlayer", human,new Position(0,0));
+        PlayableCharacter player = new PlayableCharacter("TestPlayer", human);
         Position newPosition = new Position(5, 5);
         player.setPosition(newPosition);
 
@@ -96,7 +98,7 @@ public class GameCharacterClassTest {
     @Test
     public void testGetPosition() {
         Human human = new Human();
-        PlayableCharacter player = new PlayableCharacter("TestPlayer", human,new Position(0,0));
+        PlayableCharacter player = new PlayableCharacter("TestPlayer", human);
         assertNotNull(player.getPosition(), "Position should not be null");
         assertEquals(new Position(0, 0), player.getPosition(), "Position should be initialized correctly at (2,3)");
     }

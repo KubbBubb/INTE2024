@@ -18,7 +18,7 @@ public class PlayerWithRaceAndArmourModifierTest {
 
     @BeforeEach
     public void setUp() {
-        testDwarfPlayer = new PlayableCharacter("DwarfPlayer", new Dwarf(),new Position(0,0));
+        testDwarfPlayer = new PlayableCharacter("DwarfPlayer", new Dwarf());
         helmet = new Helmet();
         chestplate = new Chestplate();
         trinket = new Trinket();

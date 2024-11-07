@@ -14,7 +14,8 @@ public class PlayableCharacterClassTest {
     @BeforeEach
     public void setUp() {
         Dwarf dwarf = new Dwarf();
-        player = new PlayableCharacter("TestPlayer", dwarf,new Position(0,0));
+        player = new PlayableCharacter("TestPlayer", dwarf);
+        player.setPosition(0, 0);
     }
 
     @Test
@@ -60,7 +61,8 @@ public class PlayableCharacterClassTest {
      @Test
     public void testPlayerMovesUpWithinBounds() {
         Map map = new Map(5, 5);
-        PlayableCharacter player = new PlayableCharacter("Player", new Human(), new Position(2, 2));
+        PlayableCharacter player = new PlayableCharacter("Player", new Human());
+        player.setPosition(2,2);
         boolean moveCharacter = player.move(map, "up");
         assertTrue(moveCharacter, "Player should be able to move up within bounds");
         assertEquals(new Position(2, 1), player.getPosition(), "Position should be updated to (2,1)");
@@ -69,7 +71,8 @@ public class PlayableCharacterClassTest {
     @Test
     public void testPlayerMovesRightWithinBounds() {
         Map map = new Map(5, 5);
-        PlayableCharacter player = new PlayableCharacter("Player", new Human(), new Position(2, 2));
+        PlayableCharacter player = new PlayableCharacter("Player", new Human());
+        player.setPosition(2,2);
         boolean moveCharacter  = player.move(map, "right");
         assertTrue(moveCharacter, "Player should be able to move right within map bounds");
         assertEquals(new Position(3, 2), player.getPosition(), "Position should be updated to (3,2)");
@@ -77,7 +80,8 @@ public class PlayableCharacterClassTest {
     @Test
     public void testPlayerMovesLeftWithinBounds() {
         Map map = new Map(5, 5);
-        PlayableCharacter player = new PlayableCharacter("Player", new Human(), new Position(2, 2));
+        PlayableCharacter player = new PlayableCharacter("Player", new Human());
+        player.setPosition(2,2);
         boolean moveCharacter  = player.move(map, "left");
         assertTrue(moveCharacter, "Player should be able to move right within map bounds");
         assertEquals(new Position(1, 2), player.getPosition(), "Position should be updated to (3,2)");
@@ -85,7 +89,8 @@ public class PlayableCharacterClassTest {
     @Test
     public void testPlayerMovesDownWithinBounds() {
         Map map = new Map(5, 5);
-        PlayableCharacter player = new PlayableCharacter("Player", new Human(), new Position(2, 2));
+        PlayableCharacter player = new PlayableCharacter("Player", new Human());
+        player.setPosition(2,2);
         boolean moveCharacter  = player.move(map, "down");
         assertTrue(moveCharacter, "Player should be able to move right within map bounds");
         assertEquals(new Position(2, 3), player.getPosition(), "Position should be updated to (3,2)");
@@ -94,7 +99,8 @@ public class PlayableCharacterClassTest {
     @Test
     public void testPlayerCannotMoveOutOfBounds() {
         Map map = new Map(5, 5);
-        PlayableCharacter player = new PlayableCharacter("Player", new Human(), new Position(2, 2));
+        PlayableCharacter player = new PlayableCharacter("Player", new Human());
+        player.setPosition(2,2);
         boolean moveCharacter  = player.move(map, "left");
         assertTrue(moveCharacter, "Player should not be able to move out of map bounds");
 
@@ -103,7 +109,8 @@ public class PlayableCharacterClassTest {
     public void testPlayerCannotMoveOnToInaccessibleTerrain() {
         Map map = new Map(5, 5);
         map.setTerrain(2, 1, new Terrain("Water", 0, true, "swim"));
-        PlayableCharacter player = new PlayableCharacter("Player", new Dwarf(), new Position(2, 2));
+        PlayableCharacter player = new PlayableCharacter("Player", new Dwarf());
+        player.setPosition(2,2);
         boolean moveCharacter  = player.move(map, "up");
         assertFalse(moveCharacter, "Player should be blocked from moving onto inaccessible terrain");
         assertEquals(new Position(2, 2), player.getPosition(), "Player should remain in the original position after blocked move");

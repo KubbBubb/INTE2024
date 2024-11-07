@@ -19,7 +19,7 @@ public class ArmourClassTest {
 
     @BeforeEach
     public void setUp() {
-        player = new PlayableCharacter("TestPlayer", new Dwarf(),new Position(0,0));
+        player = new PlayableCharacter("TestPlayer", new Dwarf());
 
         helmet = new Helmet();
         chestplate = new Chestplate();

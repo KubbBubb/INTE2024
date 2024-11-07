@@ -2,10 +2,12 @@ package rougelike;
 
 public class PlayableCharacter extends GameCharacter {
     private int deathCounter;
+    private Position position;
 
-    public PlayableCharacter(String name, Race race, Position startPosition) {
-        super(name, race, startPosition);
+    public PlayableCharacter(String name, Race race) {
+        super(name, race);
         this.deathCounter = 0;
+        this.position = position;
     }
 
     @Override
@@ -43,11 +45,17 @@ public class PlayableCharacter extends GameCharacter {
         super.setHealth(health);
 
         if (health <= 0) {
-            death();
+            playerDeathReset();
         }
     }
 
-    public void death() {
+    public void setPosition(int x, int y){
+
+        this.position = new Position(x, y);
+
+    }
+
+    public void playerDeathReset() {
         super.setHealth(100 * getRace().getHealthModifier());
         setLevel(1);
         setExperience(0);

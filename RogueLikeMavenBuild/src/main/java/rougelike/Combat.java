@@ -35,7 +35,7 @@ public class Combat {
                     + first.getHealth() + " hp left");
 
             if(pc.getHealth() == 0.0){
-                pc.death();
+                pc.playerDeathReset();
                 System.out.println("You died");
             }else if (npc.getHealth() == 0.0){
                 System.out.println("You Won!");
@@ -50,8 +50,9 @@ public class Combat {
         var human = new Human();
         var giant = new Giant();
 
-        var pc = new PlayableCharacter("pc", giant,new Position(0,0));
+        var pc = new PlayableCharacter("pc", giant);
         var npc = new NonPlayableCharacter("npc", human,new Position(2,2));
+        pc.setPosition(0,0);
 
         fight(pc, npc);
 

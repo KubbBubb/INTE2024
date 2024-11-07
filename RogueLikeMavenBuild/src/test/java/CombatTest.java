@@ -7,7 +7,6 @@ import rougelike.races.Dwarf;
 import rougelike.races.Elf;
 import rougelike.races.Giant;
 import rougelike.races.Human;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static rougelike.Combat.fight;
 import static rougelike.combat.Action.hit;
@@ -22,7 +21,7 @@ public class CombatTest {
 
         var human = new Human();
 
-        var pc = new PlayableCharacter("test pc", human,new Position(0,0));
+        var pc = new PlayableCharacter("test pc", human);
         var npc = new NonPlayableCharacter("test npc", human,new Position(0,0));
 
         double remainingHp =  npc.getHealth() - (npc.getRace().getStrengthModifier() * 10);
@@ -39,10 +38,10 @@ public class CombatTest {
         var human = new Human();
         var elf = new Elf();
 
-        var pc = new PlayableCharacter("test pc", elf,new Position(0,0));
+        var pc = new PlayableCharacter("test pc", elf);
         var npc = new NonPlayableCharacter("test npc", human,new Position(0,0));
 
-        assertEquals(pc, initiativeOrder(pc, npc).getFirst());
+        assertEquals(pc, initiativeOrder(pc, npc).get(0));
 
     }
 
@@ -53,10 +52,10 @@ public class CombatTest {
         var human = new Human();
         var dwarf = new Dwarf();
 
-        var pc = new PlayableCharacter("test pc", dwarf,new Position(1,1));
+        var pc = new PlayableCharacter("test pc", dwarf);
         var npc = new NonPlayableCharacter("test npc", human,new Position(0,0));
 
-        assertEquals(npc, initiativeOrder(pc, npc).getFirst());
+        assertEquals(npc, initiativeOrder(pc, npc).get(0));
 
     }
 
@@ -67,10 +66,10 @@ public class CombatTest {
         var human = new Human();
         var humanTwo = new Human();
 
-        var pc = new PlayableCharacter("test pc", humanTwo,new Position(1,1));
-        var npc = new NonPlayableCharacter("test npc", human,new Position(0,0));
+        var pc = new PlayableCharacter("test pc", humanTwo);
+        var npc = new NonPlayableCharacter("test npc", human, new Position(0,0));
 
-        assertEquals(npc, initiativeOrder(pc, npc).getFirst());
+        assertEquals(npc, initiativeOrder(pc, npc).get(0));
 
     }
 
@@ -81,7 +80,7 @@ public class CombatTest {
         var human = new Human();
         var giant = new Giant();
 
-        var pc = new PlayableCharacter("test pc", human,new Position(1,1));
+        var pc = new PlayableCharacter("test pc", human);
         var npc = new NonPlayableCharacter("test unga bunga", giant,new Position(0,0));
 
         pc.setHealth(10);
@@ -107,7 +106,7 @@ public class CombatTest {
         var human = new Human();
         var giant = new Giant();
 
-        var pc = new PlayableCharacter("pc", giant,new Position(1,1));
+        var pc = new PlayableCharacter("pc", giant);
         var npc = new NonPlayableCharacter("npc", human,new Position(0,0));
 
         fight(pc, npc);
