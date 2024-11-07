@@ -58,7 +58,7 @@ public class TerrainTests {
     }
 
     @Test
-    void testSetExploredToFalse() {
+     void testSetExploredToFalse() {
         terrain.setExplored(true);
         terrain.setExplored(false);
         assertFalse(terrain.isExplored(), "setExplored(false) should make isExplored() return false");
@@ -70,8 +70,10 @@ public class TerrainTests {
 
     @Test
     void testIsBlocking(){
-        assertFalse(terrain.isBlocking(),"isBlocking() should return false");
-        assertTrue(!terrain.isBlocking(),"isBlocking() should return true");
+        Terrain nonBlockingTerrain = new Terrain("Grass", 1, false, "Walk");
+        assertFalse(nonBlockingTerrain.isBlocking(), "isBlocking() should return false ");
+        Terrain blockingTerrain = new Terrain("Mountain", 5, true, "fly");
+        assertTrue(blockingTerrain.isBlocking(), "isBlocking() should return true ");
     }
     @Test
     void testGetAccessType() {

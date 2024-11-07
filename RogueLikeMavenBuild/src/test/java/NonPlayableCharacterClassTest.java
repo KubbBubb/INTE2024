@@ -1,6 +1,7 @@
 import rougelike.NonPlayableCharacter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import rougelike.Position;
 import rougelike.races.Giant;
 
 import java.util.Arrays;
@@ -15,7 +16,7 @@ public class NonPlayableCharacterClassTest {
 
     @BeforeEach
     public void setUp() {
-        npc = new NonPlayableCharacter("TestNPC", new Giant());
+        npc = new NonPlayableCharacter("TestNPC", new Giant(),new Position(2,2));
     }
 
     @Test
@@ -106,5 +107,17 @@ public class NonPlayableCharacterClassTest {
     @Test
     public void testGetRandomReplyWithNoReplies() {
         assertEquals("I don't really understand...", npc.getRandomReply("Unknown"));
+    }
+    @Test
+    public void testInitialPosition() {
+        Position initialPosition = npc.getPosition();
+        assertEquals(2, initialPosition.getX(), "Initial X position should be 2");
+        assertEquals(2, initialPosition.getY(), "Initial Y position should be 2");
+    }
+
+    @Test
+    public void testGetStandingPosition() {
+        Position standingPosition = npc.getStandingPosition();
+        assertEquals(new Position(2, 2), standingPosition, "Standing position should match initialized position (2,2)");
     }
 }
