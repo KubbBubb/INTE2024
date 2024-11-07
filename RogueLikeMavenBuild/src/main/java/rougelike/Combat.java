@@ -19,7 +19,7 @@ public class Combat {
     5. Repetera från 3 tills en karaktär är besegrad
      */
 
-    public static void fight(Player pc, NonPlayableCharacter npc){
+    public static void fight(PlayableCharacter pc, NonPlayableCharacter npc){
 
         ArrayList<GameCharacter> orderList = initiativeOrder(pc, npc);
         GameCharacter first = orderList.get(0);
@@ -50,7 +50,7 @@ public class Combat {
         var human = new Human();
         var giant = new Giant();
 
-        var pc = new Player("pc", giant,new Position(0,0));
+        var pc = new PlayableCharacter("pc", giant,new Position(0,0));
         var npc = new NonPlayableCharacter("npc", human,new Position(2,2));
 
         fight(pc, npc);

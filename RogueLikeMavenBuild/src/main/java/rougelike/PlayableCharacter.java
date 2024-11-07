@@ -1,10 +1,10 @@
 package rougelike;
 
-public class Player extends GameCharacter {
+public class PlayableCharacter extends GameCharacter {
     private double experience;
     private int deathCounter;
 
-     public Player(String name, Race race,Position startPosition) {
+     public PlayableCharacter(String name, Race race, Position startPosition) {
         super(name, race,startPosition);
         this.deathCounter = 0;
     }

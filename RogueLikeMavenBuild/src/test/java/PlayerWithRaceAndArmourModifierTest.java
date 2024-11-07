@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import rougelike.Player;
+import rougelike.PlayableCharacter;
 import rougelike.Position;
 import rougelike.armour.Chestplate;
 import rougelike.armour.Helmet;
@@ -11,14 +11,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class PlayerWithRaceAndArmourModifierTest {
 
-    private Player testDwarfPlayer;
+    private PlayableCharacter testDwarfPlayer;
     private Helmet helmet;
     private Chestplate chestplate;
     private Trinket trinket;
 
     @BeforeEach
     public void setUp() {
-        testDwarfPlayer = new Player("DwarfPlayer", new Dwarf(),new Position(0,0));
+        testDwarfPlayer = new PlayableCharacter("DwarfPlayer", new Dwarf(),new Position(0,0));
         helmet = new Helmet();
         chestplate = new Chestplate();
         trinket = new Trinket();
