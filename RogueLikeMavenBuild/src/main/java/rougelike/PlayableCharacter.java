@@ -1,50 +1,56 @@
 package rougelike;
 
 public class PlayableCharacter extends GameCharacter {
-    private double experience;
     private int deathCounter;
 
-     public PlayableCharacter(String name, Race race, Position startPosition) {
-        super(name, race,startPosition);
+    public PlayableCharacter(String name, Race race, Position startPosition) {
+        super(name, race, startPosition);
         this.deathCounter = 0;
     }
 
+    @Override
     public double getExperience() {
-        return this.experience;
+        return super.getExperience(); // Använder getter från GameCharacter
     }
 
-     public void addExperience(int amount) {
-        this.experience += amount;
+    public void addExperience(double amount) {
+        double currentExperience = getExperience();
+        currentExperience += amount; // Lägg till erfarenhet
 
-        while (this.experience >= 100) {
-            this.experience -= 100;
-            levelUp();
+        // Använder nu if-sats istället för den tidigare while-loopen
+        if (currentExperience >= 100.0) {
+            currentExperience -= 100.0;
+            levelUpOnce();
         }
+
+        setExperience(currentExperience); // Uppdatera experience med hjälp av setter
     }
 
-    public void levelUp() {
+    public void levelUpOnce() {
         this.setLevel(this.getLevel() + 1);
     }
 
-    public void setExperience(int experience){
-        this.experience = experience;
+    @Override
+    public void setExperience(double experience) {
+        super.setExperience(experience); // Använder setter från GameCharacter
     }
 
     @Override
     public void setHealth(double health) {
-         super.setHealth(health);
+        super.setHealth(health);
 
-         if (health <= 0) {
-             death();
-         }
+        if (health <= 0) {
+            death();
+        }
     }
 
-    public void death(){
-         super.setHealth(100 * getRace().getHealthModifier());
-         setLevel(1);
-         setExperience(0);
-         deathCounter++;
+    public void death() {
+        super.setHealth(100 * getRace().getHealthModifier());
+        setLevel(1);
+        setExperience(0);
+        deathCounter++;
     }
+
     public boolean move(Map map, String direction) {
         Position newPosition = getPosition().move(direction);
         if (!isWithinBounds(map, newPosition)) {
@@ -71,10 +77,7 @@ public class PlayableCharacter extends GameCharacter {
     }
 
     private void updatePosition(Position newPosition) {
-         setPosition(newPosition);
+        setPosition(newPosition);
         System.out.println("Moved to " + newPosition.getX() + ", " + newPosition.getY());
     }
-
 }
-
-

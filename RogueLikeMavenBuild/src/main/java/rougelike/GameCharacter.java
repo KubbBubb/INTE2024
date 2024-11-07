@@ -92,6 +92,11 @@ public abstract class GameCharacter {
         this.magic = magic * profession.getMagicModifier();
     }
 
+    public void setExperience(double experience) {
+        this.experience = experience;
+    }
+
+
     public Profession getProfession() {
         if (this.profession == null) {
             throw new IllegalStateException("Character has no profession.");
