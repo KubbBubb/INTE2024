@@ -81,8 +81,8 @@ public class GameCharacterClassTest {
        PlayableCharacter player = new PlayableCharacter("TestPlayer", human);
         player.setPosition(2,2);
         Position initialPosition = player.getPosition();
-        assertEquals(0, initialPosition.getX(), "Initial X position should be 2");
-        assertEquals(0, initialPosition.getY(), "Initial Y position should be 3");
+        assertEquals(2, initialPosition.getX(), "Initial X position should be 2");
+        assertEquals(2, initialPosition.getY(), "Initial Y position should be 3");
     }
     @Test
      public void testSetPosition() {
@@ -99,8 +99,9 @@ public class GameCharacterClassTest {
     public void testGetPosition() {
         Human human = new Human();
         PlayableCharacter player = new PlayableCharacter("TestPlayer", human);
+        player.setPosition(2,3);
         assertNotNull(player.getPosition(), "Position should not be null");
-        assertEquals(new Position(0, 0), player.getPosition(), "Position should be initialized correctly at (2,3)");
+        assertEquals(new Position(2, 3), player.getPosition(), "Position should be initialized correctly at (2,3)");
     }
 
 

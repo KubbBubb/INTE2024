@@ -1,13 +1,12 @@
 package rougelike;
 
 public class PlayableCharacter extends GameCharacter {
-    private int deathCounter;
-    private Position position;
+    private int deathCounter;  //räknar mängden resets för spelaren
+    private Position position; //spelarens geografiska position
 
     public PlayableCharacter(String name, Race race) {
         super(name, race);
         this.deathCounter = 0;
-        this.position = position;
     }
 
     @Override
@@ -16,6 +15,7 @@ public class PlayableCharacter extends GameCharacter {
     }
 
     public void addExperience(double amount) {
+
         double currentExperience = getExperience();
         currentExperience += amount; // Lägg till erfarenhet
 
@@ -37,58 +37,95 @@ public class PlayableCharacter extends GameCharacter {
 
     @Override
     public void setExperience(double experience) {
-        super.setExperience(experience); // Använder setter från GameCharacter
+
+        if (getExperience() + experience > Integer.MAX_VALUE){
+            throw new IllegalArgumentException("Overflow");
+        }else{
+            super.setExperience(experience);
+        }
     }
 
     @Override
     public void setHealth(double health) {
-        super.setHealth(health);
 
-        if (health <= 0) {
-            playerDeathReset();
+        if (getHealth() + health > Integer.MAX_VALUE){
+            throw new IllegalArgumentException("Overflow");
+        }else{
+            super.setHealth(health);
         }
-    }
-
-    public void setPosition(int x, int y){
-
-        this.position = new Position(x, y);
 
     }
+
+
 
     public void playerDeathReset() {
+
+        /*
+        Metod för spelardöd, som ställer om alla stats till level 1
+         */
+
         super.setHealth(100 * getRace().getHealthModifier());
         setLevel(1);
         setExperience(0);
         deathCounter++;
     }
 
+    public int getDeathCounter() {
+        return deathCounter;
+    }
+
     public boolean move(Map map, String direction) {
-        Position newPosition = getPosition().move(direction);
-        if (!isWithinBounds(map, newPosition)) {
-            System.out.println("Out of bounds!");
-            return false;
+
+        try{
+            Position newPosition = getPosition().move(direction);
+            if (!isWithinBounds(map, newPosition)) {
+                System.out.println("Out of bounds!");
+                return false;
+            }
+            if (!canAccessTerrain(map, newPosition)) {
+                System.out.println("Unable to move on this terrain!");
+                return false;
+            }
+            updatePosition(newPosition);
+            return true;
+        }catch (NullPointerException e){
+            throw new NullPointerException("Parametern i metoden move får inte vara null");
         }
-        if (!canAccessTerrain(map, newPosition)) {
-            System.out.println("Unable to move on this terrain!");
-            return false;
-        }
-        updatePosition(newPosition);
-        return true;
+
     }
 
     private boolean isWithinBounds(Map map, Position position) {
-        int x = position.getX();
-        int y = position.getY();
-        return x >= 0 && y >= 0 && x < map.getWidth() && y < map.getHeight();
+
+        try{
+            int x = position.getX();
+            int y = position.getY();
+            return x >= 0 && y >= 0 && x < map.getWidth() && y < map.getHeight();
+        }catch (NullPointerException e){
+            throw new NullPointerException("Parametern i metoden move får inte vara null");
+        }
+
+
     }
 
     private boolean canAccessTerrain(Map map, Position position) {
-        Terrain terrain = map.getTerrain(position.getX(), position.getY());
-        return !terrain.isBlocking() && terrain.getAccessType().equals("walk");
+
+        try{
+            Terrain terrain = map.getTerrain(position.getX(), position.getY());
+            return !terrain.isBlocking() && terrain.getAccessType().equals("walk");
+        }catch (NullPointerException e){
+            throw new NullPointerException("Parametern i metoden move får inte vara null");
+        }
+
     }
 
     private void updatePosition(Position newPosition) {
-        setPosition(newPosition);
-        System.out.println("Moved to " + newPosition.getX() + ", " + newPosition.getY());
+
+        try{
+            setPosition(newPosition);
+            System.out.println("Moved to " + newPosition.getX() + ", " + newPosition.getY());
+        }catch (NullPointerException e){
+            throw new NullPointerException("Parametern i metoden move får inte vara null");
+        }
+
     }
 }

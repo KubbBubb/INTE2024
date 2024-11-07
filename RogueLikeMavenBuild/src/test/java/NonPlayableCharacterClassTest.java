@@ -117,7 +117,7 @@ public class NonPlayableCharacterClassTest {
 
     @Test
     public void testGetStandingPosition() {
-        Position standingPosition = npc.getStandingPosition();
+        Position standingPosition = npc.getPosition();
         assertEquals(new Position(2, 2), standingPosition, "Standing position should match initialized position (2,2)");
     }
 }
