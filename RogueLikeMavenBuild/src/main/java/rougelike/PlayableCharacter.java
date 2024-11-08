@@ -122,7 +122,6 @@ public class PlayableCharacter extends GameCharacter {
 
         try{
             setPosition(newPosition);
-            System.out.println("Moved to " + newPosition.getX() + ", " + newPosition.getY());
         }catch (NullPointerException e){
             throw new NullPointerException("Parametern i metoden move får inte vara null");
         }
