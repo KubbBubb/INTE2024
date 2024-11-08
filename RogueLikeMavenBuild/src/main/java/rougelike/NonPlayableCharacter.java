@@ -18,13 +18,13 @@ public class NonPlayableCharacter extends GameCharacter {
     // Default reply if a prompt is not found in a dialogue map.
     private static final String DEFAULT_REPLY = "I don't quite understand...";
 
-    // Hashmap for storing the dialogues for each NPC
+    // Hashmap for storing the dialogues for each NPC.
     private final HashMap<String, String> dialogues;
 
     // Hashmap for storing the dialogues for each NPC which have a random reply from a list of replies.
     private final HashMap<String, List<String>> randomDialogues = new HashMap<>();
 
-    // Position variable to store the NPCs standing position
+    // Position variable to store the NPCs standing position.
     private final Position position;
 
     /**
@@ -104,7 +104,7 @@ public class NonPlayableCharacter extends GameCharacter {
         if (replies == null || Arrays.stream(replies).anyMatch(Objects::isNull)) {
             throw new IllegalArgumentException("Replies must be non-null Strings");
         }
-        List<String> currentReplies = randomDialogues.computeIfAbsent(prompt, _ -> new ArrayList<>());
+        List<String> currentReplies = randomDialogues.computeIfAbsent(prompt, k -> new ArrayList<>());
         for (String reply : replies) {
             if (!currentReplies.contains(reply)) {
                 currentReplies.add(reply);
