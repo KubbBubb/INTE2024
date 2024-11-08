@@ -46,21 +46,6 @@ public class Combat {
 
         }
     }
-
-
-    public static void main(String[] args) {
-
-        var human = new Human();
-        var giant = new Giant();
-
-        var pc = new PlayableCharacter("pc", human);
-        var npc = new NonPlayableCharacter("npc", giant,new Position(2,2));
-        pc.setPosition(0,0);
-
-        fight(pc, npc);
-
-
-    }
 }
 
 

@@ -111,6 +111,7 @@ public class NonPlayableCharacterClassTest {
     @Test
     public void testInitialPosition() {
         Position initialPosition = npc.getStandingPosition();
+        System.out.println(initialPosition);
         assertEquals(2, initialPosition.getX(), "Initial X position should be 2");
         assertEquals(2, initialPosition.getY(), "Initial Y position should be 2");
     }

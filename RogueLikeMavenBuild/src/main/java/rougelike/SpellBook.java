@@ -21,6 +21,15 @@ public class SpellBook {
         return false;
     }
 
+    public Magic findMagic(String name){
+        for (Magic magic : magics){
+            if (magic.getName().equalsIgnoreCase(name)){
+                return magic;
+            }
+        }
+        return null;
+    }
+
     public boolean addMagic(Magic spell){
 
         if (magics.contains(spell)){
@@ -31,4 +40,7 @@ public class SpellBook {
         return true;
     }
 
+    public ArrayList<Magic> getMagics() {
+        return magics;
+    }
 }

@@ -1,35 +1,25 @@
 package rougelike;
 
-public abstract class Magic {
+public class Magic {
 
+    private static final double BASE_EFFECT = 20;
     private final String name;
-    private int effect;
-    private int cost; //eventuell resurs hos spelarkaraktären??
-    private int missingHitPoints;
+    private boolean isOffensive;
 
-
-    public Magic(String name, int effect, int missingHitPoints, int cost){
-
+    public Magic(String name, boolean isOffensive){
         this.name = name;
-        this.missingHitPoints = missingHitPoints;
-        this.effect = effect;
-        this.cost =  cost;
-
+        this.isOffensive = isOffensive;
     }
 
-    public int getEffect() {
-        return effect;
-    }
-
-    public int getMissingHitPoints() {
-        return missingHitPoints;
-    }
-
-    public int getCost() {
-        return cost;
+    public boolean getIsOffensive() {
+        return isOffensive;
     }
 
     public String getName() {
         return name;
+    }
+
+    public static double getBaseEffect() {
+        return BASE_EFFECT;
     }
 }

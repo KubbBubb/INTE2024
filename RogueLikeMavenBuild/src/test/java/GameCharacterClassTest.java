@@ -103,6 +103,4 @@ public class GameCharacterClassTest {
         assertNotNull(player.getPosition(), "Position should not be null");
         assertEquals(new Position(2, 3), player.getPosition(), "Position should be initialized correctly at (2,3)");
     }
-
-
 }
