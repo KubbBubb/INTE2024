@@ -46,6 +46,19 @@ public class Combat {
 
         }
     }
+
+    public static void main(String[] args) {
+
+        PlayableCharacter pc = new PlayableCharacter("pc", new Human());
+        NonPlayableCharacter npc = new NonPlayableCharacter("npc", new Human(), new Position(0, 0));
+        pc.setHealth(1000000000.0);
+        npc.setHealth(1000000000.0);
+
+        fight(pc, npc);
+
+
+    }
+
 }
 
 

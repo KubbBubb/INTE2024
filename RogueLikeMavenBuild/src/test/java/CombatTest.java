@@ -8,6 +8,7 @@ import rougelike.races.Elf;
 import rougelike.races.Giant;
 import rougelike.races.Human;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static rougelike.Combat.fight;
 import static rougelike.combat.Action.hit;
 import static rougelike.combat.Initiative.initiativeOrder;
@@ -139,6 +140,7 @@ public class CombatTest {
         var npc = new NonPlayableCharacter("npc", giant, new Position(0,0));
 
         fight(pc, npc);
+        assertTrue(pc.getHealth() >= 0.0);
 
     }
 
