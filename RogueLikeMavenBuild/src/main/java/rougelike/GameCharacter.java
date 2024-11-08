@@ -27,7 +27,7 @@ public abstract class GameCharacter {
         this.speed = 10 * race.getSpeedModifier();
         this.stamina = 100 * race.getStaminaModifier();
         this.magic = 10 * race.getMagicModifier();
-        this.position = position;
+        this.position = new Position(0,0);
     }
 
     public String getName() {
@@ -79,7 +79,7 @@ public abstract class GameCharacter {
     }
 
     public void setPosition(int x, int y){
-        this.position = position;
+        this.position = new Position(x, y);
     }
     public void setPosition(Position position) {
         this.position = position;
