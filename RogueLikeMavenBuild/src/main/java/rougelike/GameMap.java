@@ -1,11 +1,11 @@
 package rougelike;
 
-public class Map {
+public class GameMap {
     private Terrain[][] map;
     private int width;
     private int height;
 
-    public Map(int width, int height) {
+    public GameMap(int width, int height) {
 
         this.width = width;
         this.height = height;

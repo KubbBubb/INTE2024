@@ -1,4 +1,4 @@
-import rougelike.Map;
+import rougelike.GameMap;
 import rougelike.PlayableCharacter;
 import rougelike.Position;
 import rougelike.Terrain;
@@ -60,7 +60,7 @@ public class PlayableCharacterClassTest {
     }
      @Test
     public void testPlayerMovesUpWithinBounds() {
-        Map map = new Map(5, 5);
+        GameMap map = new GameMap(5, 5);
         PlayableCharacter player = new PlayableCharacter("Player", new Human());
         player.setPosition(2,2);
         boolean moveCharacter = player.move(map, "up");
@@ -70,7 +70,7 @@ public class PlayableCharacterClassTest {
 
     @Test
     public void testPlayerMovesRightWithinBounds() {
-        Map map = new Map(5, 5);
+        GameMap map = new GameMap(5, 5);
         PlayableCharacter player = new PlayableCharacter("Player", new Human());
         player.setPosition(2,2);
         boolean moveCharacter  = player.move(map, "right");
@@ -79,7 +79,7 @@ public class PlayableCharacterClassTest {
     }
     @Test
     public void testPlayerMovesLeftWithinBounds() {
-        Map map = new Map(5, 5);
+        GameMap map = new GameMap(5, 5);
         PlayableCharacter player = new PlayableCharacter("Player", new Human());
         player.setPosition(2,2);
         boolean moveCharacter  = player.move(map, "left");
@@ -88,7 +88,7 @@ public class PlayableCharacterClassTest {
     }
     @Test
     public void testPlayerMovesDownWithinBounds() {
-        Map map = new Map(5, 5);
+        GameMap map = new GameMap(5, 5);
         PlayableCharacter player = new PlayableCharacter("Player", new Human());
         player.setPosition(2,2);
         boolean moveCharacter  = player.move(map, "down");
@@ -98,7 +98,7 @@ public class PlayableCharacterClassTest {
 
     @Test
     public void testPlayerCannotMoveOutOfBounds() {
-        Map map = new Map(5, 5);
+        GameMap map = new GameMap(5, 5);
         PlayableCharacter player = new PlayableCharacter("Player", new Human());
         player.setPosition(2,2);
         boolean moveCharacter  = player.move(map, "left");
@@ -107,7 +107,7 @@ public class PlayableCharacterClassTest {
     }
     @Test
     public void testPlayerCannotMoveOnToInaccessibleTerrain() {
-        Map map = new Map(5, 5);
+        GameMap map = new GameMap(5, 5);
         map.setTerrain(2, 1, new Terrain("Water", 0, true, "swim"));
         PlayableCharacter player = new PlayableCharacter("Player", new Dwarf());
         player.setPosition(2,2);

@@ -74,7 +74,7 @@ public class PlayableCharacter extends GameCharacter {
         return deathCounter;
     }
 
-    public boolean move(Map map, String direction) {
+    public boolean move(GameMap map, String direction) {
 
         try{
             Position newPosition = getPosition().move(direction);
@@ -94,7 +94,7 @@ public class PlayableCharacter extends GameCharacter {
 
     }
 
-    private boolean isWithinBounds(Map map, Position position) {
+    private boolean isWithinBounds(GameMap map, Position position) {
 
         try{
             int x = position.getX();
@@ -107,7 +107,7 @@ public class PlayableCharacter extends GameCharacter {
 
     }
 
-    private boolean canAccessTerrain(Map map, Position position) {
+    private boolean canAccessTerrain(GameMap map, Position position) {
 
         try{
             Terrain terrain = map.getTerrain(position.getX(), position.getY());

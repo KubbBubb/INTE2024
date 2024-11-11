@@ -1,19 +1,19 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import rougelike.Map;
+import rougelike.GameMap;
 import rougelike.Terrain;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class MapTests {
+class GameMapTests {
 
-    private Map map;
+    private GameMap map;
     private final int width = 5;
     private final int height = 5;
 
     @BeforeEach
     void setUp() {
-        map = new Map(width, height);
+        map = new GameMap(width, height);
     }
 
     @Test
@@ -25,8 +25,32 @@ class MapTests {
     @Test
     void testDefaultTerrainInitialization() {
         for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
-                Terrain terrain = map.getTerrain(x, y);
+            {
+                Terrain terrain = map.getTerrain(x, 0);
+                assertNotNull(terrain);
+                assertEquals("Grass", terrain.getTerrainType());
+                assertEquals(1, terrain.getHeight());
+            }
+            {
+                Terrain terrain = map.getTerrain(x, 1);
+                assertNotNull(terrain);
+                assertEquals("Grass", terrain.getTerrainType());
+                assertEquals(1, terrain.getHeight());
+            }
+            {
+                Terrain terrain = map.getTerrain(x, 2);
+                assertNotNull(terrain);
+                assertEquals("Grass", terrain.getTerrainType());
+                assertEquals(1, terrain.getHeight());
+            }
+            {
+                Terrain terrain = map.getTerrain(x, 3);
+                assertNotNull(terrain);
+                assertEquals("Grass", terrain.getTerrainType());
+                assertEquals(1, terrain.getHeight());
+            }
+            {
+                Terrain terrain = map.getTerrain(x, 4);
                 assertNotNull(terrain);
                 assertEquals("Grass", terrain.getTerrainType());
                 assertEquals(1, terrain.getHeight());
@@ -38,17 +62,16 @@ class MapTests {
     void testSetTerrainWithinBounds() {
         Terrain mountain = new Terrain("Mountain", 5, false, "fly");
         map.setTerrain(2, 2, mountain);
-        Terrain retrievedTerrain = map.getTerrain(2, 2);
+        Terrain terrain = map.getTerrain(2, 2);
 
-        assertNotNull(retrievedTerrain);
-        assertEquals("Mountain", retrievedTerrain.getTerrainType());
-        assertEquals(5, retrievedTerrain.getHeight());
+        assertNotNull(terrain);
+        assertEquals("Mountain", terrain.getTerrainType());
+        assertEquals(5, terrain.getHeight());
     }
 
     @Test
     void testGetTerrainWithinBounds() {
         Terrain terrain = map.getTerrain(0, 0);
-        assertNotNull(terrain);
         assertEquals("Grass", terrain.getTerrainType());
     }
 
@@ -56,7 +79,6 @@ class MapTests {
     void testSetTerrainOutOfBounds() {
         Terrain mountain = new Terrain("Mountain", 5, false, "fly");
         map.setTerrain(-1, -1, mountain);
-
         assertNull(map.getTerrain(-1, -1));
     }
 
@@ -73,7 +95,6 @@ class MapTests {
         int playerX = 2;
         int playerY = 2;
         int visionRange = 1;
-
         map.calculateVisibility(playerX, playerY, visionRange);
 
         for (int x = playerX - visionRange; x <= playerX + visionRange; x++) {
@@ -114,9 +135,7 @@ class MapTests {
         int playerX = 2;
         int playerY = 2;
         int visionRange = 1;
-
         map.calculateVisibility(playerX, playerY, visionRange);
-
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 if (Math.abs(x - playerX) > visionRange || Math.abs(y - playerY) > visionRange) {

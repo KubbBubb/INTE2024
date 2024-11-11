@@ -2,7 +2,7 @@ package rougelike;
 
 import java.util.Random;
 
-public class MapGenerator {
+public class GameMapGenerator {
     private int width;
     private int height;
     private static final double WATER_PROBABILITY = 0.25;
@@ -11,12 +11,12 @@ public class MapGenerator {
     private static final double HOUSE_PROBABILITY = 0.25;
   
     
-    public MapGenerator(int width, int height) {
+    public GameMapGenerator(int width, int height) {
         this.width = width;
         this.height = height;
     }
-    public Map generateMap() {
-        Map map = new Map(width, height);
+    public GameMap generateMap() {
+        GameMap map = new GameMap(width, height);
         Random random = new Random();
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
